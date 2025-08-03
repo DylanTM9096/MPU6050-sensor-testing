@@ -1,0 +1,2 @@
+source /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/gdbinit/symbols
+source /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/gdbinit/connect

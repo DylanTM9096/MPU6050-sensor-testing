@@ -1,0 +1,871 @@
+Command: /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.elf /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.elf -m '/home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dylan/esp/esp-idf/tools/idf.py'
+h: Detected size(4096k) larESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dev-3568-g565cca2fee 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug  3 2025 10:22:14[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ba30h ( 47664) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=0001ba58 vaddr=3fc93200 size=02a10h ( 10768) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=0001e470 vaddr=40374000 size=01ba8h (  7080) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1b9d4h (113108) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003b9fc vaddr=40375ba8 size=0d5ach ( 54700) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=00048fb0 vaddr=600fe000 size=0001ch (    28) load[0m
+[0;32mI (149) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (149) boot: Disabling RNG early entropy source...[0m
+[0;32mI (160) cpu_start: Multicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (169) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     Real-Time-Project[0m
+[0;32mI (174) app_init: App version:      8a0416c-dirty[0m
+[0;32mI (179) app_init: Compile time:     Aug  3 2025 10:22:00[0m
+[0;32mI (184) app_init: ELF file SHA256:  5ed43d111...[0m
+[0;32mI (188) app_init: ESP-IDF:          v5.5-dev-3568-g565cca2fee[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC96690 len 00053080 (332 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (222) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (227) heap_init: At 600FE01C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (236) spi_flash: flash io: dio[0m
+[0;33mW (239) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (251) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (257) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (264) main_task: Started on CPU0[0m
+[0;32mI (274) main_task: Calling app_main()[0m
+[0;32mI (274) main_task: Returned from app_main()[0m
+[1;31mE (284) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -0.95 0.66[0m
+[0;32mI (284) KF: kf.angle= 89.50 acc= 89.29[0m
+[1;31mE (294) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.61 -0.98 0.66[0m
+[0;32mI (294) KF: kf.angle= 89.50 acc= 89.27[0m
+[1;31mE (304) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.98 0.69[0m
+[0;32mI (304) KF: kf.angle= 89.51 acc= 89.36[0m
+[1;31mE (314) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -0.97 0.66[0m
+[0;32mI (314) KF: kf.angle= 89.51 acc= 89.37[0m
+[1;31mE (324) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -1.01 0.69[0m
+[0;32mI (324) KF: kf.angle= 89.51 acc= 89.35[0m
+[1;31mE (334) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -1.01 0.68[0m
+[0;32mI (334) KF: kf.angle= 89.51 acc= 89.37[0m
+[1;31mE (344) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.95 0.69[0m
+[0;32mI (344) KF: kf.angle= 89.51 acc= 89.39[0m
+[1;31mE (354) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -1.03 0.69[0m
+[0;32mI (354) KF: kf.angle= 89.51 acc= 89.41[0m
+[1;31mE (364) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.63 -0.94 0.74[0m
+[0;32mI (364) KF: kf.angle= 89.51 acc= 89.49[0m
+[1;31mE (374) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.63 -0.92 0.65[0m
+[0;32mI (374) KF: kf.angle= 89.51 acc= 89.37[0m
+[1;31mE (384) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.96 0.60[0m
+[0;32mI (384) KF: kf.angle= 89.50 acc= 89.34[0m
+[1;31mE (394) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.69[0m
+[0;32mI (394) KF: kf.angle= 89.49 acc= 89.26[0m
+[1;31mE (404) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -1.01 0.64[0m
+[0;32mI (404) KF: kf.angle= 89.49 acc= 89.39[0m
+[1;31mE (414) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -0.99 0.62[0m
+[0;32mI (414) KF: kf.angle= 89.49 acc= 89.37[0m
+[1;31mE (424) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.59 -1.02 0.65[0m
+[0;32mI (424) KF: kf.angle= 89.49 acc= 89.46[0m
+[1;31mE (434) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.69[0m
+[0;32mI (434) KF: kf.angle= 89.48 acc= 89.37[0m
+[1;31mE (444) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.99 0.69[0m
+[0;32mI (444) KF: kf.angle= 89.48 acc= 89.42[0m
+[1;31mE (454) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.73 -0.98 0.60[0m
+[0;32mI (454) KF: kf.angle= 89.49 acc= 89.45[0m
+[1;31mE (464) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.94 0.72[0m
+[0;32mI (464) KF: kf.angle= 89.48 acc= 89.34[0m
+[1;31mE (474) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -1.03 0.63[0m
+[0;32mI (474) KF: kf.angle= 89.48 acc= 89.43[0m
+[1;31mE (484) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.69 -1.02 0.63[0m
+[0;32mI (484) KF: kf.angle= 89.49 acc= 89.49[0m
+[1;31mE (494) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.94 0.65[0m
+[0;32mI (494) KF: kf.angle= 89.49 acc= 89.44[0m
+[1;31mE (504) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -1.04 0.72[0m
+[0;32mI (504) KF: kf.angle= 89.48 acc= 89.36[0m
+[1;31mE (514) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -1.02 0.69[0m
+[0;32mI (514) KF: kf.angle= 89.48 acc= 89.36[0m
+[1;31mE (524) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.66 -0.97 0.68[0m
+[0;32mI (524) KF: kf.angle= 89.47 acc= 89.35[0m
+[1;31mE (534) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.98 0.69[0m
+[0;32mI (534) KF: kf.angle= 89.47 acc= 89.37[0m
+[1;31mE (544) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.98 0.65[0m
+[0;32mI (544) KF: kf.angle= 89.47 acc= 89.45[0m
+[1;31mE (554) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.92 0.62[0m
+[0;32mI (554) KF: kf.angle= 89.47 acc= 89.36[0m
+[1;31mE (564) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.65 -0.98 0.63[0m
+[0;32mI (564) KF: kf.angle= 89.47 acc= 89.46[0m
+[1;31mE (574) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.59 -1.00 0.58[0m
+[0;32mI (574) KF: kf.angle= 89.47 acc= 89.36[0m
+[1;31mE (584) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.98 0.66[0m
+[0;32mI (584) KF: kf.angle= 89.47 acc= 89.47[0m
+[1;31mE (594) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -1.05 0.60[0m
+[0;32mI (594) KF: kf.angle= 89.47 acc= 89.37[0m
+[1;31mE (604) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.65[0m
+[0;32mI (604) KF: kf.angle= 89.47 acc= 89.43[0m
+[1;31mE (614) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.96 0.65[0m
+[0;32mI (614) KF: kf.angle= 89.47 acc= 89.38[0m
+[1;31mE (624) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -1.03 0.66[0m
+[0;32mI (624) KF: kf.angle= 89.47 acc= 89.47[0m
+[1;31mE (634) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -1.02 0.67[0m
+[0;32mI (634) KF: kf.angle= 89.46 acc= 89.24[0m
+[1;31mE (644) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.63 -0.97 0.65[0m
+[0;32mI (644) KF: kf.angle= 89.45 acc= 89.37[0m
+[1;31mE (654) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.63[0m
+[0;32mI (654) KF: kf.angle= 89.46 acc= 89.50[0m
+[1;31mE (664) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.68 -0.98 0.58[0m
+[0;32mI (664) KF: kf.angle= 89.45 acc= 89.31[0m
+[1;31mE (674) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.95 0.67[0m
+[0;32mI (674) KF: kf.angle= 89.47 acc= 89.53[0m
+[1;31mE (684) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -0.95 0.64[0m
+[0;32mI (684) KF: kf.angle= 89.47 acc= 89.48[0m
+[1;31mE (694) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.02 0.62[0m
+[0;32mI (694) KF: kf.angle= 89.46 acc= 89.28[0m
+[1;31mE (704) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.64 -0.98 0.60[0m
+[0;32mI (704) KF: kf.angle= 89.46 acc= 89.36[0m
+[1;31mE (714) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.97 0.69[0m
+[0;32mI (714) KF: kf.angle= 89.45 acc= 89.38[0m
+[1;31mE (724) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.94 0.69[0m
+[0;32mI (724) KF: kf.angle= 89.45 acc= 89.36[0m
+[1;31mE (734) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.64 -0.97 0.66[0m
+[0;32mI (734) KF: kf.angle= 89.45 acc= 89.40[0m
+[1;31mE (744) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -0.95 0.64[0m
+[0;32mI (744) KF: kf.angle= 89.45 acc= 89.38[0m
+[1;31mE (754) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -1.02 0.64[0m
+[0;32mI (754) KF: kf.angle= 89.46 acc= 89.49[0m
+[1;31mE (764) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.01 0.66[0m
+[0;32mI (764) KF: kf.angle= 89.46 acc= 89.42[0m
+[1;31mE (774) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.97 0.63[0m
+[0;32mI (774) KF: kf.angle= 89.46 acc= 89.44[0m
+[1;31mE (784) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -1.00 0.61[0m
+[0;32mI (784) KF: kf.angle= 89.46 acc= 89.37[0m
+[1;31mE (794) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.05 0.69[0m
+[0;32mI (794) KF: kf.angle= 89.45 acc= 89.31[0m
+[1;31mE (804) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -0.96 0.63[0m
+[0;32mI (804) KF: kf.angle= 89.43 acc= 89.24[0m
+[1;31mE (814) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.00 0.66[0m
+[0;32mI (814) KF: kf.angle= 89.42 acc= 89.27[0m
+[1;31mE (824) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.03 0.65[0m
+[0;32mI (824) KF: kf.angle= 89.42 acc= 89.32[0m
+[1;31mE (834) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.68 -0.97 0.63[0m
+[0;32mI (834) KF: kf.angle= 89.42 acc= 89.43[0m
+[1;31mE (844) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.62 -0.92 0.67[0m
+[0;32mI (844) KF: kf.angle= 89.43 acc= 89.45[0m
+[1;31mE (854) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -0.98 0.68[0m
+[0;32mI (854) KF: kf.angle= 89.44 acc= 89.47[0m
+[1;31mE (864) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.98 0.73[0m
+[0;32mI (864) KF: kf.angle= 89.44 acc= 89.41[0m
+[1;31mE (874) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.96 0.69[0m
+[0;32mI (874) KF: kf.angle= 89.44 acc= 89.30[0m
+[1;31mE (884) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.99 0.66[0m
+[0;32mI (884) KF: kf.angle= 89.43 acc= 89.38[0m
+[1;31mE (894) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.71 -0.98 0.70[0m
+[0;32mI (894) KF: kf.angle= 89.43 acc= 89.34[0m
+[1;31mE (904) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -0.95 0.63[0m
+[0;32mI (904) KF: kf.angle= 89.43 acc= 89.41[0m
+[1;31mE (914) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.98 0.66[0m
+[0;32mI (914) KF: kf.angle= 89.44 acc= 89.44[0m
+[1;31mE (924) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.94 0.58[0m
+[0;32mI (924) KF: kf.angle= 89.43 acc= 89.32[0m
+[1;31mE (934) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.95 0.63[0m
+[0;32mI (934) KF: kf.angle= 89.43 acc= 89.35[0m
+[1;31mE (944) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.02 0.69[0m
+[0;32mI (944) KF: kf.angle= 89.44 acc= 89.45[0m
+[1;31mE (954) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.88 0.67[0m
+[0;32mI (954) KF: kf.angle= 89.43 acc= 89.33[0m
+[1;31mE (964) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.92 0.70[0m
+[0;32mI (964) KF: kf.angle= 89.43 acc= 89.39[0m
+[1;31mE (974) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -0.96 0.70[0m
+[0;32mI (974) KF: kf.angle= 89.43 acc= 89.37[0m
+[1;31mE (984) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.96 0.68[0m
+[0;32mI (984) KF: kf.angle= 89.43 acc= 89.42[0m
+[1;31mE (994) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -0.98 0.68[0m
+[0;32mI (994) KF: kf.angle= 89.44 acc= 89.46[0m
+[1;31mE (1004) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.79 -0.98 0.64[0m
+[0;32mI (1004) KF: kf.angle= 89.44 acc= 89.34[0m
+[1;31mE (1014) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.00 0.66[0m
+[0;32mI (1014) KF: kf.angle= 89.45 acc= 89.49[0m
+[1;31mE (1024) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.90 0.73[0m
+[0;32mI (1024) KF: kf.angle= 89.44 acc= 89.38[0m
+[1;31mE (1034) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -1.06 0.66[0m
+[0;32mI (1034) KF: kf.angle= 89.44 acc= 89.34[0m
+[1;31mE (1044) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.05 0.74[0m
+[0;32mI (1044) KF: kf.angle= 89.43 acc= 89.35[0m
+[1;31mE (1054) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.58 -1.14 0.66[0m
+[0;32mI (1054) KF: kf.angle= 89.42 acc= 89.29[0m
+[1;31mE (1064) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.61 -1.05 0.64[0m
+[0;32mI (1064) KF: kf.angle= 89.42 acc= 89.34[0m
+[1;31mE (1074) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.96 0.63[0m
+[0;32mI (1074) KF: kf.angle= 89.42 acc= 89.35[0m
+[1;31mE (1084) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.01 0.66[0m
+[0;32mI (1084) KF: kf.angle= 89.42 acc= 89.43[0m
+[1;31mE (1094) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.04 0.67[0m
+[0;32mI (1094) KF: kf.angle= 89.43 acc= 89.42[0m
+[1;31mE (1104) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.63 -0.96 0.64[0m
+[0;32mI (1104) KF: kf.angle= 89.42 acc= 89.34[0m
+[1;31mE (1114) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.69 -0.95 0.66[0m
+[0;32mI (1114) KF: kf.angle= 89.42 acc= 89.40[0m
+[1;31mE (1124) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.99 0.65[0m
+[0;32mI (1124) KF: kf.angle= 89.43 acc= 89.40[0m
+[1;31mE (1134) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -0.99 0.72[0m
+[0;32mI (1134) KF: kf.angle= 89.43 acc= 89.41[0m
+[1;31mE (1144) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.00 0.66[0m
+[0;32mI (1144) KF: kf.angle= 89.44 acc= 89.52[0m
+[1;31mE (1154) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.95 0.72[0m
+[0;32mI (1154) KF: kf.angle= 89.45 acc= 89.46[0m
+[1;31mE (1164) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.64 -0.94 0.68[0m
+[0;32mI (1164) KF: kf.angle= 89.45 acc= 89.39[0m
+[1;31mE (1174) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -1.05 0.67[0m
+[0;32mI (1174) KF: kf.angle= 89.45 acc= 89.43[0m
+[1;31mE (1184) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -1.01 0.69[0m
+[0;32mI (1184) KF: kf.angle= 89.46 acc= 89.47[0m
+[1;31mE (1194) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.65 -0.90 0.69[0m
+[0;32mI (1194) KF: kf.angle= 89.45 acc= 89.30[0m
+[1;31mE (1204) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -0.93 0.70[0m
+[0;32mI (1204) KF: kf.angle= 89.44 acc= 89.38[0m
+[1;31mE (1214) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.98 0.71[0m
+[0;32mI (1214) KF: kf.angle= 89.45 acc= 89.45[0m
+[1;31mE (1224) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.89 0.64[0m
+[0;32mI (1224) KF: kf.angle= 89.45 acc= 89.44[0m
+[1;31mE (1234) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.00 0.62[0m
+[0;32mI (1234) KF: kf.angle= 89.45 acc= 89.37[0m
+[1;31mE (1244) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.76 -0.98 0.66[0m
+[0;32mI (1244) KF: kf.angle= 89.45 acc= 89.40[0m
+[1;31mE (1254) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.66 -0.99 0.63[0m
+[0;32mI (1254) KF: kf.angle= 89.45 acc= 89.41[0m
+[1;31mE (1264) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.94 0.67[0m
+[0;32mI (1264) KF: kf.angle= 89.46 acc= 89.47[0m
+[1;31mE (1274) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.58 -1.02 0.68[0m
+[0;32mI (1274) KF: kf.angle= 89.45 acc= 89.41[0m
+[1;31mE (1284) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.68 -1.08 0.63[0m
+[0;32mI (1284) KF: kf.angle= 89.46 acc= 89.46[0m
+[1;31mE (1294) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.99 0.65[0m
+[0;32mI (1294) KF: kf.angle= 89.44 acc= 89.26[0m
+[1;31mE (1304) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.05 0.65[0m
+[0;32mI (1304) KF: kf.angle= 89.44 acc= 89.38[0m
+[1;31mE (1314) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -0.98 0.67[0m
+[0;32mI (1314) KF: kf.angle= 89.44 acc= 89.40[0m
+[1;31mE (1324) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.92 0.63[0m
+[0;32mI (1324) KF: kf.angle= 89.44 acc= 89.40[0m
+[1;31mE (1334) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.72 -0.90 0.70[0m
+[0;32mI (1334) KF: kf.angle= 89.43 acc= 89.32[0m
+[1;31mE (1344) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -0.98 0.71[0m
+[0;32mI (1344) KF: kf.angle= 89.42 acc= 89.26[0m
+[1;31mE (1354) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.02 0.66[0m
+[0;32mI (1354) KF: kf.angle= 89.42 acc= 89.45[0m
+[1;31mE (1364) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.94 0.67[0m
+[0;32mI (1364) KF: kf.angle= 89.43 acc= 89.41[0m
+[1;31mE (1374) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.99 0.65[0m
+[0;32mI (1374) KF: kf.angle= 89.43 acc= 89.47[0m
+[1;31mE (1384) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -0.97 0.68[0m
+[0;32mI (1384) KF: kf.angle= 89.44 acc= 89.41[0m
+[1;31mE (1394) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.95 0.63[0m
+[0;32mI (1394) KF: kf.angle= 89.42 acc= 89.26[0m
+[1;31mE (1404) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.71 -1.02 0.65[0m
+[0;32mI (1404) KF: kf.angle= 89.42 acc= 89.40[0m
+[1;31mE (1414) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.04 0.65[0m
+[0;32mI (1414) KF: kf.angle= 89.42 acc= 89.39[0m
+[1;31mE (1424) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.02 0.66[0m
+[0;32mI (1424) KF: kf.angle= 89.42 acc= 89.39[0m
+[1;31mE (1434) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -1.05 0.69[0m
+[0;32mI (1434) KF: kf.angle= 89.42 acc= 89.33[0m
+[1;31mE (1444) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.96 0.66[0m
+[0;32mI (1444) KF: kf.angle= 89.42 acc= 89.37[0m
+[1;31mE (1454) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.71 -0.97 0.66[0m
+[0;32mI (1454) KF: kf.angle= 89.42 acc= 89.38[0m
+[1;31mE (1464) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.02 0.61[0m
+[0;32mI (1464) KF: kf.angle= 89.42 acc= 89.38[0m
+[1;31mE (1474) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.00 0.63[0m
+[0;32mI (1474) KF: kf.angle= 89.42 acc= 89.45[0m
+[1;31mE (1484) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.65[0m
+[0;32mI (1484) KF: kf.angle= 89.42 acc= 89.39[0m
+[1;31mE (1494) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -1.02 0.69[0m
+[0;32mI (1494) KF: kf.angle= 89.42 acc= 89.39[0m
+[1;31mE (1504) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -0.95 0.64[0m
+[0;32mI (1504) KF: kf.angle= 89.41 acc= 89.30[0m
+[1;31mE (1514) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -0.94 0.63[0m
+[0;32mI (1514) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (1524) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.00 0.60[0m
+[0;32mI (1524) KF: kf.angle= 89.42 acc= 89.41[0m
+[1;31mE (1534) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.05 0.72[0m
+[0;32mI (1534) KF: kf.angle= 89.41 acc= 89.35[0m
+[1;31mE (1544) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.97 0.65[0m
+[0;32mI (1544) KF: kf.angle= 89.41 acc= 89.33[0m
+[1;31mE (1554) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.00 0.69[0m
+[0;32mI (1554) KF: kf.angle= 89.40 acc= 89.33[0m
+[1;31mE (1564) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.95 0.70[0m
+[0;32mI (1564) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (1574) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.01 0.70[0m
+[0;32mI (1574) KF: kf.angle= 89.40 acc= 89.38[0m
+[1;31mE (1584) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -1.02 0.61[0m
+[0;32mI (1584) KF: kf.angle= 89.41 acc= 89.50[0m
+[1;31mE (1594) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.59 -0.95 0.62[0m
+[0;32mI (1594) KF: kf.angle= 89.42 acc= 89.46[0m
+[1;31mE (1604) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.01 0.68[0m
+[0;32mI (1604) KF: kf.angle= 89.43 acc= 89.50[0m
+[1;31mE (1614) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.96 0.69[0m
+[0;32mI (1614) KF: kf.angle= 89.44 acc= 89.43[0m
+[1;31mE (1624) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.91 0.64[0m
+[0;32mI (1624) KF: kf.angle= 89.44 acc= 89.45[0m
+[1;31mE (1634) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.73 -0.92 0.64[0m
+[0;32mI (1634) KF: kf.angle= 89.43 acc= 89.30[0m
+[1;31mE (1644) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -1.04 0.70[0m
+[0;32mI (1644) KF: kf.angle= 89.42 acc= 89.36[0m
+[1;31mE (1654) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.62 -0.97 0.70[0m
+[0;32mI (1654) KF: kf.angle= 89.42 acc= 89.37[0m
+[1;31mE (1664) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.03 0.68[0m
+[0;32mI (1664) KF: kf.angle= 89.41 acc= 89.31[0m
+[1;31mE (1674) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.99 0.69[0m
+[0;32mI (1674) KF: kf.angle= 89.40 acc= 89.28[0m
+[1;31mE (1684) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.57 -1.02 0.60[0m
+[0;32mI (1684) KF: kf.angle= 89.40 acc= 89.38[0m
+[1;31mE (1694) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.66 -1.02 0.65[0m
+[0;32mI (1694) KF: kf.angle= 89.41 acc= 89.45[0m
+[1;31mE (1704) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.00 0.63[0m
+[0;32mI (1704) KF: kf.angle= 89.40 acc= 89.31[0m
+[1;31mE (1714) MPU6050: Accel: 0.08 0.02 1.10 | Gyro: 0.66 -0.98 0.69[0m
+[0;32mI (1714) KF: kf.angle= 89.39 acc= 89.22[0m
+[1;31mE (1724) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -0.97 0.69[0m
+[0;32mI (1724) KF: kf.angle= 89.39 acc= 89.43[0m
+[1;31mE (1734) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.66[0m
+[0;32mI (1734) KF: kf.angle= 89.40 acc= 89.43[0m
+[1;31mE (1744) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.99 0.72[0m
+[0;32mI (1744) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (1754) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.73[0m
+[0;32mI (1754) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (1764) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.97 0.67[0m
+[0;32mI (1764) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (1774) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -0.99 0.68[0m
+[0;32mI (1774) KF: kf.angle= 89.40 acc= 89.38[0m
+[1;31mE (1784) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.68 -1.02 0.69[0m
+[0;32mI (1784) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (1794) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.67 -0.96 0.69[0m
+[0;32mI (1794) KF: kf.angle= 89.40 acc= 89.38[0m
+[1;31mE (1804) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -0.98 0.71[0m
+[0;32mI (1804) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (1814) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.03 0.57[0m
+[0;32mI (1814) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (1824) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.02 0.68[0m
+[0;32mI (1824) KF: kf.angle= 89.40 acc= 89.37[0m
+[1;31mE (1834) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.71 -1.01 0.64[0m
+[0;32mI (1834) KF: kf.angle= 89.40 acc= 89.34[0m
+[1;31mE (1844) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.94 0.65[0m
+[0;32mI (1844) KF: kf.angle= 89.38 acc= 89.25[0m
+[1;31mE (1854) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.56 -1.00 0.69[0m
+[0;32mI (1854) KF: kf.angle= 89.38 acc= 89.31[0m
+[1;31mE (1864) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -0.98 0.67[0m
+[0;32mI (1864) KF: kf.angle= 89.39 acc= 89.43[0m
+[1;31mE (1874) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.63 -0.99 0.64[0m
+[0;32mI (1874) KF: kf.angle= 89.40 acc= 89.53[0m
+[1;31mE (1884) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.60 -0.98 0.63[0m
+[0;32mI (1884) KF: kf.angle= 89.40 acc= 89.40[0m
+[1;31mE (1894) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.98 0.66[0m
+[0;32mI (1894) KF: kf.angle= 89.40 acc= 89.34[0m
+[1;31mE (1904) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.01 0.67[0m
+[0;32mI (1904) KF: kf.angle= 89.40 acc= 89.36[0m
+[1;31mE (1914) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.67[0m
+[0;32mI (1914) KF: kf.angle= 89.40 acc= 89.38[0m
+[1;31mE (1924) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.96 0.71[0m
+[0;32mI (1924) KF: kf.angle= 89.39 acc= 89.33[0m
+[1;31mE (1934) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.03 0.72[0m
+[0;32mI (1934) KF: kf.angle= 89.39 acc= 89.32[0m
+[1;31mE (1944) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.86 0.66[0m
+[0;32mI (1944) KF: kf.angle= 89.38 acc= 89.33[0m
+[1;31mE (1954) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.65 -0.97 0.75[0m
+[0;32mI (1954) KF: kf.angle= 89.37 acc= 89.26[0m
+[1;31mE (1964) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -1.08 0.69[0m
+[0;32mI (1964) KF: kf.angle= 89.37 acc= 89.28[0m
+[1;31mE (1974) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -1.05 0.64[0m
+[0;32mI (1974) KF: kf.angle= 89.37 acc= 89.39[0m
+[1;31mE (1984) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.99 0.65[0m
+[0;32mI (1984) KF: kf.angle= 89.37 acc= 89.40[0m
+[1;31mE (1994) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.69[0m
+[0;32mI (1994) KF: kf.angle= 89.37 acc= 89.34[0m
+[1;31mE (2004) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.71 -0.97 0.65[0m
+[0;32mI (2004) KF: kf.angle= 89.38 acc= 89.39[0m
+[1;31mE (2014) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.60 -0.98 0.60[0m
+[0;32mI (2014) KF: kf.angle= 89.40 acc= 89.55[0m
+[1;31mE (2024) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.05 0.69[0m
+[0;32mI (2024) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (2034) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -0.95 0.67[0m
+[0;32mI (2034) KF: kf.angle= 89.40 acc= 89.37[0m
+[1;31mE (2044) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.02 0.70[0m
+[0;32mI (2044) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (2054) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.02 0.68[0m
+[0;32mI (2054) KF: kf.angle= 89.41 acc= 89.47[0m
+[1;31mE (2064) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.00 0.58[0m
+[0;32mI (2064) KF: kf.angle= 89.42 acc= 89.47[0m
+[1;31mE (2074) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.67 -1.01 0.71[0m
+[0;32mI (2074) KF: kf.angle= 89.42 acc= 89.40[0m
+[1;31mE (2084) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.05 0.66[0m
+[0;32mI (2084) KF: kf.angle= 89.42 acc= 89.38[0m
+[1;31mE (2094) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.99 0.70[0m
+[0;32mI (2094) KF: kf.angle= 89.42 acc= 89.40[0m
+[1;31mE (2104) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.98 0.66[0m
+[0;32mI (2104) KF: kf.angle= 89.42 acc= 89.37[0m
+[1;31mE (2114) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.62 -0.97 0.71[0m
+[0;32mI (2114) KF: kf.angle= 89.40 acc= 89.25[0m
+[1;31mE (2124) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.02 0.65[0m
+[0;32mI (2124) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (2134) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -1.01 0.63[0m
+[0;32mI (2134) KF: kf.angle= 89.39 acc= 89.32[0m
+[1;31mE (2144) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.65 -0.97 0.63[0m
+[0;32mI (2144) KF: kf.angle= 89.40 acc= 89.40[0m
+[1;31mE (2154) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -1.05 0.64[0m
+[0;32mI (2154) KF: kf.angle= 89.40 acc= 89.41[0m
+[1;31mE (2164) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.65 -0.95 0.69[0m
+[0;32mI (2164) KF: kf.angle= 89.40 acc= 89.37[0m
+[1;31mE (2174) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.94 0.68[0m
+[0;32mI (2174) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (2184) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.72 -1.00 0.66[0m
+[0;32mI (2184) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (2194) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -0.92 0.67[0m
+[0;32mI (2194) KF: kf.angle= 89.39 acc= 89.29[0m
+[1;31mE (2204) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.99 0.68[0m
+[0;32mI (2204) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (2214) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.74 -1.01 0.66[0m
+[0;32mI (2214) KF: kf.angle= 89.41 acc= 89.47[0m
+[1;31mE (2224) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.73 -0.99 0.66[0m
+[0;32mI (2224) KF: kf.angle= 89.40 acc= 89.32[0m
+[1;31mE (2234) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.00 0.60[0m
+[0;32mI (2234) KF: kf.angle= 89.39 acc= 89.31[0m
+[1;31mE (2244) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -0.96 0.67[0m
+[0;32mI (2244) KF: kf.angle= 89.40 acc= 89.43[0m
+[1;31mE (2254) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -1.02 0.63[0m
+[0;32mI (2254) KF: kf.angle= 89.39 acc= 89.30[0m
+[1;31mE (2264) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.58 -1.04 0.67[0m
+[0;32mI (2264) KF: kf.angle= 89.39 acc= 89.36[0m
+[1;31mE (2274) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -1.00 0.63[0m
+[0;32mI (2274) KF: kf.angle= 89.40 acc= 89.45[0m
+[1;31mE (2284) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.76 -0.97 0.71[0m
+[0;32mI (2284) KF: kf.angle= 89.41 acc= 89.47[0m
+[1;31mE (2294) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.61 -0.99 0.68[0m
+[0;32mI (2294) KF: kf.angle= 89.40 acc= 89.31[0m
+[1;31mE (2304) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.07 0.66[0m
+[0;32mI (2304) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (2314) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.93 0.69[0m
+[0;32mI (2314) KF: kf.angle= 89.41 acc= 89.43[0m
+[1;31mE (2324) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.68[0m
+[0;32mI (2324) KF: kf.angle= 89.41 acc= 89.47[0m
+[1;31mE (2334) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -1.01 0.66[0m
+[0;32mI (2334) KF: kf.angle= 89.41 acc= 89.32[0m
+[1;31mE (2344) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.98 0.62[0m
+[0;32mI (2344) KF: kf.angle= 89.41 acc= 89.41[0m
+[1;31mE (2354) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.56 -1.02 0.69[0m
+[0;32mI (2354) KF: kf.angle= 89.40 acc= 89.36[0m
+[1;31mE (2364) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.66 -0.96 0.68[0m
+[0;32mI (2364) KF: kf.angle= 89.39 acc= 89.29[0m
+[1;31mE (2374) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.72 -0.99 0.65[0m
+[0;32mI (2374) KF: kf.angle= 89.40 acc= 89.41[0m
+[1;31mE (2384) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.95 0.68[0m
+[0;32mI (2384) KF: kf.angle= 89.39 acc= 89.35[0m
+[1;31mE (2394) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -1.08 0.71[0m
+[0;32mI (2394) KF: kf.angle= 89.39 acc= 89.39[0m
+[1;31mE (2404) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.92 0.73[0m
+[0;32mI (2404) KF: kf.angle= 89.40 acc= 89.40[0m
+[1;31mE (2414) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.70[0m
+[0;32mI (2414) KF: kf.angle= 89.40 acc= 89.40[0m
+[1;31mE (2424) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.99 0.59[0m
+[0;32mI (2424) KF: kf.angle= 89.40 acc= 89.40[0m
+[1;31mE (2434) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.73 -1.00 0.64[0m
+[0;32mI (2434) KF: kf.angle= 89.40 acc= 89.37[0m
+[1;31mE (2444) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.99 0.69[0m
+[0;32mI (2444) KF: kf.angle= 89.41 acc= 89.48[0m
+[1;31mE (2454) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.05 0.65[0m
+[0;32mI (2454) KF: kf.angle= 89.42 acc= 89.46[0m
+[1;31mE (2464) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.95 0.59[0m
+[0;32mI (2464) KF: kf.angle= 89.42 acc= 89.45[0m
+[1;31mE (2474) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.97 0.65[0m
+[0;32mI (2474) KF: kf.angle= 89.41 acc= 89.28[0m
+[1;31mE (2484) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -0.98 0.67[0m
+[0;32mI (2484) KF: kf.angle= 89.41 acc= 89.40[0m
+[1;31mE (2494) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.70 -0.97 0.65[0m
+[0;32mI (2494) KF: kf.angle= 89.40 acc= 89.34[0m
+[1;31mE (2504) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.97 0.60[0m
+[0;32mI (2504) KF: kf.angle= 89.39 acc= 89.31[0m
+[1;31mE (2514) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.98 0.72[0m
+[0;32mI (2514) KF: kf.angle= 89.39 acc= 89.33[0m
+[1;31mE (2524) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.98 0.65[0m
+[0;32mI (2524) KF: kf.angle= 89.39 acc= 89.43[0m
+[1;31mE (2534) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.61 -1.04 0.65[0m
+[0;32mI (2534) KF: kf.angle= 89.39 acc= 89.32[0m
+[1;31mE (2544) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.00 0.68[0m
+[0;32mI (2544) KF: kf.angle= 89.39 acc= 89.41[0m
+[1;31mE (2554) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.06 0.63[0m
+[0;32mI (2554) KF: kf.angle= 89.39 acc= 89.34[0m
+[1;31mE (2564) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.08 0.66[0m
+[0;32mI (2564) KF: kf.angle= 89.40 acc= 89.51[0m
+[1;31mE (2574) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.99 0.68[0m
+[0;32mI (2574) KF: kf.angle= 89.41 acc= 89.51[0m
+[1;31mE (2584) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.66 -1.01 0.61[0m
+[0;32mI (2584) KF: kf.angle= 89.42 acc= 89.47[0m
+[1;31mE (2594) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -1.02 0.64[0m
+[0;32mI (2594) KF: kf.angle= 89.42 acc= 89.39[0m
+[1;31mE (2604) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.99 0.65[0m
+[0;32mI (2604) KF: kf.angle= 89.41 acc= 89.32[0m
+[1;31mE (2614) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.65 -0.89 0.69[0m
+[0;32mI (2614) KF: kf.angle= 89.40 acc= 89.30[0m
+[1;31mE (2624) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.98 0.65[0m
+[0;32mI (2624) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (2634) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.98 0.60[0m
+[0;32mI (2634) KF: kf.angle= 89.39 acc= 89.29[0m
+[1;31mE (2644) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.00 0.65[0m
+[0;32mI (2644) KF: kf.angle= 89.40 acc= 89.43[0m
+[1;31mE (2654) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.62 -1.01 0.67[0m
+[0;32mI (2654) KF: kf.angle= 89.41 acc= 89.51[0m
+[1;31mE (2664) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.96 0.66[0m
+[0;32mI (2664) KF: kf.angle= 89.42 acc= 89.52[0m
+[1;31mE (2674) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.98 0.66[0m
+[0;32mI (2674) KF: kf.angle= 89.42 acc= 89.41[0m
+[1;31mE (2684) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.02 0.64[0m
+[0;32mI (2684) KF: kf.angle= 89.43 acc= 89.43[0m
+[1;31mE (2694) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.00 0.69[0m
+[0;32mI (2694) KF: kf.angle= 89.42 acc= 89.40[0m
+[1;31mE (2704) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.95 0.66[0m
+[0;32mI (2704) KF: kf.angle= 89.42 acc= 89.38[0m
+[1;31mE (2714) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.72 -1.02 0.67[0m
+[0;32mI (2714) KF: kf.angle= 89.42 acc= 89.37[0m
+[1;31mE (2724) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.06 0.67[0m
+[0;32mI (2724) KF: kf.angle= 89.42 acc= 89.41[0m
+[1;31mE (2734) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.59 -0.99 0.69[0m
+[0;32mI (2734) KF: kf.angle= 89.41 acc= 89.36[0m
+[1;31mE (2744) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.96 0.63[0m
+[0;32mI (2744) KF: kf.angle= 89.40 acc= 89.28[0m
+[1;31mE (2754) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.69 -0.94 0.65[0m
+[0;32mI (2754) KF: kf.angle= 89.41 acc= 89.51[0m
+[1;31mE (2764) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.98 0.61[0m
+[0;32mI (2764) KF: kf.angle= 89.41 acc= 89.39[0m
+[1;31mE (2774) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -1.03 0.64[0m
+[0;32mI (2774) KF: kf.angle= 89.41 acc= 89.38[0m
+[1;31mE (2784) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.57 -1.01 0.72[0m
+[0;32mI (2784) KF: kf.angle= 89.41 acc= 89.41[0m
+[1;31mE (2794) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.68 -1.02 0.66[0m
+[0;32mI (2794) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (2804) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.07 0.67[0m
+[0;32mI (2804) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (2814) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -0.98 0.71[0m
+[0;32mI (2814) KF: kf.angle= 89.40 acc= 89.37[0m
+[1;31mE (2824) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.98 0.63[0m
+[0;32mI (2824) KF: kf.angle= 89.39 acc= 89.30[0m
+[1;31mE (2834) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.93 0.69[0m
+[0;32mI (2834) KF: kf.angle= 89.39 acc= 89.42[0m
+[1;31mE (2844) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.68 -1.03 0.67[0m
+[0;32mI (2844) KF: kf.angle= 89.39 acc= 89.35[0m
+[1;31mE (2854) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.74 -1.09 0.64[0m
+[0;32mI (2854) KF: kf.angle= 89.41 acc= 89.58[0m
+[1;31mE (2864) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.99 0.65[0m
+[0;32mI (2864) KF: kf.angle= 89.42 acc= 89.48[0m
+[1;31mE (2874) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.73 -1.02 0.68[0m
+[0;32mI (2874) KF: kf.angle= 89.42 acc= 89.40[0m
+[1;31mE (2884) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.67 -0.95 0.64[0m
+[0;32mI (2884) KF: kf.angle= 89.42 acc= 89.44[0m
+[1;31mE (2894) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.02 0.60[0m
+[0;32mI (2894) KF: kf.angle= 89.42 acc= 89.44[0m
+[1;31mE (2904) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.96 0.63[0m
+[0;32mI (2904) KF: kf.angle= 89.42 acc= 89.38[0m
+[1;31mE (2914) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.93 0.58[0m
+[0;32mI (2914) KF: kf.angle= 89.42 acc= 89.40[0m
+[1;31mE (2924) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.66 -0.94 0.68[0m
+[0;32mI (2924) KF: kf.angle= 89.42 acc= 89.41[0m
+[1;31mE (2934) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.64 -0.95 0.63[0m
+[0;32mI (2934) KF: kf.angle= 89.41 acc= 89.27[0m
+[1;31mE (2944) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.71 -1.01 0.62[0m
+[0;32mI (2944) KF: kf.angle= 89.40 acc= 89.32[0m
+[1;31mE (2954) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.73 -1.00 0.66[0m
+[0;32mI (2954) KF: kf.angle= 89.39 acc= 89.35[0m
+[1;31mE (2964) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.65 -1.00 0.73[0m
+[0;32mI (2964) KF: kf.angle= 89.40 acc= 89.45[0m
+[1;31mE (2974) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.98 0.68[0m
+[0;32mI (2974) KF: kf.angle= 89.40 acc= 89.38[0m
+[1;31mE (2984) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.60[0m
+[0;32mI (2984) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (2994) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -1.05 0.67[0m
+[0;32mI (2994) KF: kf.angle= 89.41 acc= 89.48[0m
+[1;31mE (3004) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.68 -0.96 0.64[0m
+[0;32mI (3004) KF: kf.angle= 89.41 acc= 89.39[0m
+[1;31mE (3014) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.02 0.61[0m
+[0;32mI (3014) KF: kf.angle= 89.41 acc= 89.41[0m
+[1;31mE (3024) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.91 0.71[0m
+[0;32mI (3024) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (3034) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.05 0.69[0m
+[0;32mI (3034) KF: kf.angle= 89.39 acc= 89.32[0m
+[1;31mE (3044) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.98 0.63[0m
+[0;32mI (3044) KF: kf.angle= 89.39 acc= 89.39[0m
+[1;31mE (3054) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.94 0.66[0m
+[0;32mI (3054) KF: kf.angle= 89.41 acc= 89.58[0m
+[1;31mE (3064) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.76 -0.97 0.70[0m
+[0;32mI (3064) KF: kf.angle= 89.41 acc= 89.31[0m
+[1;31mE (3074) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.91 0.69[0m
+[0;32mI (3074) KF: kf.angle= 89.42 acc= 89.51[0m
+[1;31mE (3084) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.60 -0.98 0.65[0m
+[0;32mI (3084) KF: kf.angle= 89.42 acc= 89.41[0m
+[1;31mE (3094) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.71 -0.98 0.67[0m
+[0;32mI (3094) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (3104) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.06 0.61[0m
+[0;32mI (3104) KF: kf.angle= 89.41 acc= 89.39[0m
+[1;31mE (3114) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.01 0.63[0m
+[0;32mI (3114) KF: kf.angle= 89.40 acc= 89.31[0m
+[1;31mE (3124) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -1.04 0.60[0m
+[0;32mI (3124) KF: kf.angle= 89.41 acc= 89.44[0m
+[1;31mE (3134) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.74 -0.98 0.69[0m
+[0;32mI (3134) KF: kf.angle= 89.39 acc= 89.28[0m
+[1;31mE (3144) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.69 -0.96 0.66[0m
+[0;32mI (3144) KF: kf.angle= 89.38 acc= 89.27[0m
+[1;31mE (3154) MPU6050: Accel: 0.08 0.02 1.11 | Gyro: 0.62 -0.99 0.64[0m
+[0;32mI (3154) KF: kf.angle= 89.36 acc= 89.18[0m
+[1;31mE (3164) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.99 0.71[0m
+[0;32mI (3164) KF: kf.angle= 89.36 acc= 89.38[0m
+[1;31mE (3174) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -1.01 0.69[0m
+[0;32mI (3174) KF: kf.angle= 89.36 acc= 89.32[0m
+[1;31mE (3184) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.99 0.72[0m
+[0;32mI (3184) KF: kf.angle= 89.36 acc= 89.37[0m
+[1;31mE (3194) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.95 0.66[0m
+[0;32mI (3194) KF: kf.angle= 89.36 acc= 89.30[0m
+[1;31mE (3204) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.58 -0.95 0.63[0m
+[0;32mI (3204) KF: kf.angle= 89.36 acc= 89.40[0m
+[1;31mE (3214) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -1.00 0.60[0m
+[0;32mI (3214) KF: kf.angle= 89.35 acc= 89.30[0m
+[1;31mE (3224) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.61 -1.06 0.63[0m
+[0;32mI (3224) KF: kf.angle= 89.36 acc= 89.38[0m
+[1;31mE (3234) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.98 0.67[0m
+[0;32mI (3234) KF: kf.angle= 89.37 acc= 89.45[0m
+[1;31mE (3244) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.68 -0.93 0.65[0m
+[0;32mI (3244) KF: kf.angle= 89.37 acc= 89.35[0m
+[1;31mE (3254) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.93 0.63[0m
+[0;32mI (3254) KF: kf.angle= 89.37 acc= 89.40[0m
+[1;31mE (3264) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -1.04 0.65[0m
+[0;32mI (3264) KF: kf.angle= 89.37 acc= 89.33[0m
+[1;31mE (3274) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.11 0.62[0m
+[0;32mI (3274) KF: kf.angle= 89.37 acc= 89.44[0m
+[1;31mE (3284) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.97 0.60[0m
+[0;32mI (3284) KF: kf.angle= 89.39 acc= 89.54[0m
+[1;31mE (3294) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.94 0.65[0m
+[0;32mI (3294) KF: kf.angle= 89.38 acc= 89.27[0m
+[1;31mE (3304) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.62 -1.01 0.63[0m
+[0;32mI (3304) KF: kf.angle= 89.37 acc= 89.31[0m
+[1;31mE (3314) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.02 0.63[0m
+[0;32mI (3314) KF: kf.angle= 89.39 acc= 89.52[0m
+[1;31mE (3324) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.93 0.62[0m
+[0;32mI (3324) KF: kf.angle= 89.39 acc= 89.40[0m
+[1;31mE (3334) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.69[0m
+[0;32mI (3334) KF: kf.angle= 89.39 acc= 89.33[0m
+[1;31mE (3344) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.63 -0.97 0.69[0m
+[0;32mI (3344) KF: kf.angle= 89.40 acc= 89.49[0m
+[1;31mE (3354) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -0.98 0.63[0m
+[0;32mI (3354) KF: kf.angle= 89.39 acc= 89.38[0m
+[1;31mE (3364) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.71 -0.95 0.70[0m
+[0;32mI (3364) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (3374) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.71 -1.01 0.64[0m
+[0;32mI (3374) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (3384) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.58 -0.97 0.63[0m
+[0;32mI (3384) KF: kf.angle= 89.39 acc= 89.32[0m
+[1;31mE (3394) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.58 -1.00 0.73[0m
+[0;32mI (3394) KF: kf.angle= 89.39 acc= 89.34[0m
+[1;31mE (3404) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.97 0.68[0m
+[0;32mI (3404) KF: kf.angle= 89.39 acc= 89.42[0m
+[1;31mE (3414) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -0.95 0.66[0m
+[0;32mI (3414) KF: kf.angle= 89.38 acc= 89.34[0m
+[1;31mE (3424) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.02 0.63[0m
+[0;32mI (3424) KF: kf.angle= 89.39 acc= 89.40[0m
+[1;31mE (3434) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.66[0m
+[0;32mI (3434) KF: kf.angle= 89.38 acc= 89.30[0m
+[1;31mE (3444) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.63[0m
+[0;32mI (3444) KF: kf.angle= 89.38 acc= 89.39[0m
+[1;31mE (3454) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.95 0.69[0m
+[0;32mI (3454) KF: kf.angle= 89.37 acc= 89.30[0m
+[1;31mE (3464) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.96 0.60[0m
+[0;32mI (3464) KF: kf.angle= 89.37 acc= 89.33[0m
+[1;31mE (3474) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.98 0.66[0m
+[0;32mI (3474) KF: kf.angle= 89.36 acc= 89.33[0m
+[1;31mE (3484) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.71 -1.02 0.65[0m
+[0;32mI (3484) KF: kf.angle= 89.36 acc= 89.35[0m
+[1;31mE (3494) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.96 0.69[0m
+[0;32mI (3494) KF: kf.angle= 89.38 acc= 89.49[0m
+[1;31mE (3504) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.97 0.65[0m
+[0;32mI (3504) KF: kf.angle= 89.38 acc= 89.40[0m
+[1;31mE (3514) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -0.97 0.68[0m
+[0;32mI (3514) KF: kf.angle= 89.37 acc= 89.30[0m
+[1;31mE (3524) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.71 -1.04 0.62[0m
+[0;32mI (3524) KF: kf.angle= 89.38 acc= 89.41[0m
+[1;31mE (3534) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.59 -0.92 0.62[0m
+[0;32mI (3534) KF: kf.angle= 89.38 acc= 89.44[0m
+[1;31mE (3544) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.89 0.67[0m
+[0;32mI (3544) KF: kf.angle= 89.39 acc= 89.42[0m
+[1;31mE (3554) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.62 -0.98 0.67[0m
+[0;32mI (3554) KF: kf.angle= 89.40 acc= 89.52[0m
+[1;31mE (3564) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.95 0.64[0m
+[0;32mI (3564) KF: kf.angle= 89.40 acc= 89.36[0m
+[1;31mE (3574) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.72 -0.98 0.63[0m
+[0;32mI (3574) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (3584) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.60 -1.05 0.76[0m
+[0;32mI (3584) KF: kf.angle= 89.41 acc= 89.47[0m
+[1;31mE (3594) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.62 -1.00 0.66[0m
+[0;32mI (3594) KF: kf.angle= 89.42 acc= 89.51[0m
+[1;31mE (3604) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.62 -0.97 0.68[0m
+[0;32mI (3604) KF: kf.angle= 89.42 acc= 89.47[0m
+[1;31mE (3614) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.63 -0.98 0.67[0m
+[0;32mI (3614) KF: kf.angle= 89.42 acc= 89.38[0m
+[1;31mE (3624) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.68[0m
+[0;32mI (3624) KF: kf.angle= 89.43 acc= 89.49[0m
+[1;31mE (3634) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.96 0.69[0m
+[0;32mI (3634) KF: kf.angle= 89.43 acc= 89.47[0m
+[1;31mE (3644) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.65 -0.97 0.71[0m
+[0;32mI (3644) KF: kf.angle= 89.43 acc= 89.41[0m
+[1;31mE (3654) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.61 -0.96 0.71[0m
+[0;32mI (3654) KF: kf.angle= 89.42 acc= 89.31[0m
+[1;31mE (3664) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -0.96 0.63[0m
+[0;32mI (3664) KF: kf.angle= 89.42 acc= 89.39[0m
+[1;31mE (3674) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.07 0.64[0m
+[0;32mI (3674) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (3684) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.60 -0.92 0.67[0m
+[0;32mI (3684) KF: kf.angle= 89.41 acc= 89.39[0m
+[1;31mE (3694) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.01 0.62[0m
+[0;32mI (3694) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (3704) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.99 0.67[0m
+[0;32mI (3704) KF: kf.angle= 89.41 acc= 89.45[0m
+[1;31mE (3714) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.01 0.66[0m
+[0;32mI (3714) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (3724) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.65 -0.95 0.62[0m
+[0;32mI (3724) KF: kf.angle= 89.41 acc= 89.46[0m
+[1;31mE (3734) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.62 -0.96 0.68[0m
+[0;32mI (3734) KF: kf.angle= 89.40 acc= 89.31[0m
+[1;31mE (3744) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.97 0.69[0m
+[0;32mI (3744) KF: kf.angle= 89.41 acc= 89.48[0m
+[1;31mE (3754) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.72 -0.98 0.64[0m
+[0;32mI (3754) KF: kf.angle= 89.41 acc= 89.33[0m
+[1;31mE (3764) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.65 -0.99 0.60[0m
+[0;32mI (3764) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (3774) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.61 -1.04 0.62[0m
+[0;32mI (3774) KF: kf.angle= 89.41 acc= 89.45[0m
+[1;31mE (3784) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -0.94 0.70[0m
+[0;32mI (3784) KF: kf.angle= 89.41 acc= 89.38[0m
+[1;31mE (3794) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.59 -0.98 0.65[0m
+[0;32mI (3794) KF: kf.angle= 89.41 acc= 89.45[0m
+[1;31mE (3804) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.62 -1.02 0.64[0m
+[0;32mI (3804) KF: kf.angle= 89.40 acc= 89.34[0m
+[1;31mE (3814) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -1.10 0.70[0m
+[0;32mI (3814) KF: kf.angle= 89.40 acc= 89.33[0m
+[1;31mE (3824) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.93 0.69[0m
+[0;32mI (3824) KF: kf.angle= 89.39 acc= 89.37[0m
+[1;31mE (3834) MPU6050: Accel: 0.07 0.01 1.11 | Gyro: 0.67 -0.99 0.63[0m
+[0;32mI (3834) KF: kf.angle= 89.39 acc= 89.36[0m
+[1;31mE (3844) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.99 0.69[0m
+[0;32mI (3844) KF: kf.angle= 89.39 acc= 89.34[0m
+[1;31mE (3854) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.02 0.69[0m
+[0;32mI (3854) KF: kf.angle= 89.40 acc= 89.51[0m
+[1;31mE (3864) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.98 0.73[0m
+[0;32mI (3864) KF: kf.angle= 89.41 acc= 89.49[0m
+[1;31mE (3874) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.02 0.74[0m
+[0;32mI (3874) KF: kf.angle= 89.40 acc= 89.36[0m
+[1;31mE (3884) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.60 -0.98 0.69[0m
+[0;32mI (3884) KF: kf.angle= 89.40 acc= 89.34[0m
+[1;31mE (3894) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.57 -1.07 0.62[0m
+[0;32mI (3894) KF: kf.angle= 89.41 acc= 89.48[0m
+[1;31mE (3904) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.69 -0.96 0.65[0m
+[0;32mI (3904) KF: kf.angle= 89.42 acc= 89.49[0m
+[1;31mE (3914) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -1.01 0.69[0m
+[0;32mI (3914) KF: kf.angle= 89.42 acc= 89.44[0m
+[1;31mE (3924) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.98 0.70[0m
+[0;32mI (3924) KF: kf.angle= 89.42 acc= 89.45[0m
+[1;31mE (3934) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.74 -0.96 0.69[0m
+[0;32mI (3934) KF: kf.angle= 89.41 acc= 89.28[0m
+[1;31mE (3944) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.66 -1.07 0.62[0m
+[0;32mI (3944) KF: kf.angle= 89.41 acc= 89.41[0m
+[1;31mE (3954) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.68 -0.98 0.63[0m
+[0;32mI (3954) KF: kf.angle= 89.40 acc= 89.36[0m
+[1;31mE (3964) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -1.02 0.66[0m
+[0;32mI (3964) KF: kf.angle= 89.42 acc= 89.58[0m
+[1;31mE (3974) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.90 0.68[0m
+[0;32mI (3974) KF: kf.angle= 89.41 acc= 89.28[0m
+[1;31mE (3984) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -0.98 0.66[0m
+[0;32mI (3984) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (3994) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.62 -1.02 0.63[0m
+[0;32mI (3994) KF: kf.angle= 89.40 acc= 89.39[0m
+[1;31mE (4004) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.70 -1.01 0.66[0m
+[0;32mI (4004) KF: kf.angle= 89.40 acc= 89.37[0m
+[1;31mE (4014) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.64 -1.04 0.67[0m
+[0;32mI (4014) KF: kf.angle= 89.40 acc= 89.36[0m
+[1;31mE (4024) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -1.02 0.68[0m
+[0;32mI (4024) KF: kf.angle= 89.39 acc= 89.34[0m
+[1;31mE (4034) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -0.98 0.70[0m
+[0;32mI (4034) KF: kf.angle= 89.40 acc= 89.47[0m
+[1;31mE (4044) MPU6050: Accel: 0.07 0.01 1.10 | Gyro: 0.68 -0.94 0.68[0m
+[0;32mI (4044) KF: kf.angle= 89.40 acc= 89.41[0m
+[1;31mE (4054) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.00 0.72[0m
+[0;32mI (4054) KF: kf.angle= 89.41 acc= 89.49[0m
+[1;31mE (4064) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.03 0.59[0m
+[0;32mI (4064) KF: kf.angle= 89.40 acc= 89.29[0m
+[1;31mE (4074) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.64 -1.02 0.69[0m
+[0;32mI (4074) KF: kf.angle= 89.40 acc= 89.42[0m
+[1;31mE (4084) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -1.08 0.68[0m
+[0;32mI (4084) KF: kf.angle= 89.41 acc= 89.47[0m
+[1;31mE (4094) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.58 -0.98 0.69[0m
+[0;32mI (4094) KF: kf.angle= 89.41 acc= 89.42[0m
+[1;31mE (4104) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.99 0.64[0m
+[0;32mI (4104) KF: kf.angle= 89.41 acc= 89.37[0m
+[1;31mE (4114) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.99 0.64[0m
+[0;32mI (4114) KF: kf.angle= 89.42 acc= 89.57[0m
+[1;31mE (4124) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.57 -1.02 0.68[0m
+[0;32mI (4124) KF: kf.angle= 89.41 acc= 89.32[0m
+[1;31mE (4134) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.74 -1.02 0.67[0m
+[0;32mI (4134) KF: kf.angle= 89.41 acc= 89.35[0m
+[1;31mE (4144) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.62 -0.99 0.66[0m
+[0;32mI (4144) KF: kf.angle= 89.40 acc= 89.36[0m
+[1;31mE (4154) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.02 0.68[0m
+[0;32mI (4154) KF: kf.angle= 89.40 acc= 89.35[0m
+[1;31mE (4164) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -1.02 0.69[0m
+[0;32mI (4164) KF: kf.angle= 89.39 acc= 89.35[0m
+[1;31mE (4174) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.65 -0.99 0.61[0m
+[0;32mI (4174) KF: kf.angle= 89.39 acc= 89.31[0m
+[1;31mE (4184) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.95 0.66[0m
+[0;32mI (4184) KF: kf.angle= 89.40 acc= 89.48[0m
+[1;31mE (4194) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.73 -0.98 0.66[0m
+[0;32mI (4194) KF: kf.angle= 89.40 acc= 89.47[0m
+[1;31mE (4204) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.98 0.67[0m
+[0;32mI (4204) KF: kf.angle= 89.41 acc= 89.47[0m
+[1;31mE (4214) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.63 -0.92 0.69[0m
+[0;32mI (4214) KF: kf.angle= 89.41 acc= 89.38[0m
+[1;31mE (4224) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.67 -0.95 0.68[0m
+[0;32mI (4224) KF: kf.angle= 89.42 acc= 89.51[0m
+[1;31mE (4234) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.64 -1.03 0.69[0m
+[0;32mI (4234) KF: kf.angle= 89.43 acc= 89.56[0m
+[1;31mE (4244) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -1.04 0.68[0m
+[0;32mI (4244) KF: kf.angle= 89.44 acc= 89.47[0m
+[1;31mE (4254) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.69 -0.95 0.67[0m
+[0;32mI (4254) KF: kf.angle= 89.44 acc= 89.44[0m
+[1;31mE (4264) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.01 0.72[0m
+[0;32mI (4264) KF: kf.angle= 89.43 acc= 89.29[0m
+[1;31mE (4274) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -0.99 0.65[0m
+[0;32mI (4274) KF: kf.angle= 89.41 acc= 89.28[0m
+[1;31mE (4284) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.59 -0.99 0.66[0m
+[0;32mI (4284) KF: kf.angle= 89.40 acc= 89.32[0m
+[1;31mE (4294) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.67 -1.01 0.65[0m
+[0;32mI (4294) KF: kf.angle= 89.41 acc= 89.49[0m
+[1;31mE (4304) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.66 -1.01 0.69[0m
+[0;32mI (4304) KF: kf.angle= 89.40 acc= 89.33[0m
+[1;31mE (4314) MPU6050: Accel: 0.08 0.01 1.11 | Gyro: 0.61 -0.95 0.69[0m
+[0;32mI (4314) KF: kf.angle= 89.39 acc= 89.33[0m
+[1;31mE (4324) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.70 -1.00 0.71[0m
+[0;32mI (4324) KF: kf.angle= 89.39 acc= 89.30[0m
+[1;31mE (4334) MPU6050: Accel: 0.08 0.01 1.10 | Gyro: 0.68 -1.01 0.65[0m
+[0;32mI (4334) KF: kf.angle= 89.38 acc= 89.36[0m

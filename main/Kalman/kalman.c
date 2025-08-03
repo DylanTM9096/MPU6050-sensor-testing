@@ -1,18 +1,16 @@
 #include "kalman.h"
 
 #define RAD_TO_DEG 57.2957795f
-#define Q_angle 0.003f
-#define Q_bias 0.003f
-#define R_measure 0.001f
+#define Q_angle 1.000f
+#define Q_bias 1.000f
+#define R_measure 1.000f
 
 static kalman_filter_t kf;
 static bool KALMAN_FILTER = KALMAN_NOT_CONFIGURED;
 static QueueHandle_t raw_imu_queue = NULL;
-static QueueHandle_t tilt_angle_queue = NULL;
 
-esp_err_t kalman_config(QueueHandle_t raw_queue, QueueHandle_t angle_queue, float initial_angle){
+esp_err_t kalman_config(QueueHandle_t raw_queue, float initial_angle){
     raw_imu_queue = raw_queue;
-    tilt_angle_queue = angle_queue;
     kf.angle = initial_angle;
     kf.bias = 0.0f;
     kf.P[0][0] = 0.0f;
@@ -61,8 +59,6 @@ void kalman_filter_step(float dt) {
     if (xQueueReceive(raw_imu_queue, &imu_data_in, portMAX_DELAY) == pdPASS) {
         float acc_angle = atan2f(imu_data_in.accel_z, imu_data_in.accel_y) * RAD_TO_DEG;
         kalman_filter_update(acc_angle, imu_data_in.gyro_x, dt); //Calculate the new tilt angle
-        //ESP_LOGI(TAG_Kalman, "Calculated tilt angle: %.2f, dt: %.6f", kf.angle, dt);
-        xQueueSend(tilt_angle_queue, &kf.angle, 0); //sends filtered tilt angle to the queue
     }
 }
 

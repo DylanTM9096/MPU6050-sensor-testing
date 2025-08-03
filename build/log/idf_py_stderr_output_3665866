@@ -1,0 +1,118 @@
+Command: /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.elf /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.elf -m '/home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dylan/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4201b170: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:164 (discriminator 1)
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+[0m
+[0;33m--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a0d: panic_abort at /home/dylan/esp/esp-idf/components/esp_system/panic.c:469
+--- 0x40379d69: esp_system_abort at /home/dylan/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40380b39: abort at /home/dylan/esp/esp-idf/components/newlib/src/abort.c:38
+--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+--- 0x4201b1dc: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037594c: esp_restart_noos at /home/dylan/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:162
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+[0m
+[0;33m--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a0d: panic_abort at /home/dylan/esp/esp-idf/components/esp_system/panic.c:469
+--- 0x40379d69: esp_system_abort at /home/dylan/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40380b39: abort at /home/dylan/esp/esp-idf/components/newlib/src/abort.c:38
+--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+--- 0x4201b1dc: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037594c: esp_restart_noos at /home/dylan/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:162
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+[0m
+[0;33m--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a0d: panic_abort at /home/dylan/esp/esp-idf/components/esp_system/panic.c:469
+--- 0x40379d69: esp_system_abort at /home/dylan/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40380b39: abort at /home/dylan/esp/esp-idf/components/newlib/src/abort.c:38
+--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+--- 0x4201b1dc: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037594c: esp_restart_noos at /home/dylan/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:162
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+[0m
+[0;33m--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a0d: panic_abort at /home/dylan/esp/esp-idf/components/esp_system/panic.c:469
+--- 0x40379d69: esp_system_abort at /home/dylan/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40380b39: abort at /home/dylan/esp/esp-idf/components/newlib/src/abort.c:38
+--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+--- 0x4201b1dc: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037594c: esp_restart_noos at /home/dylan/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:162
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+[0m
+[0;33m--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a0d: panic_abort at /home/dylan/esp/esp-idf/components/esp_system/panic.c:469
+--- 0x40379d69: esp_system_abort at /home/dylan/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40380b39: abort at /home/dylan/esp/esp-idf/components/newlib/src/abort.c:38
+--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+--- 0x4201b1dc: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037594c: esp_restart_noos at /home/dylan/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:162
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+[0m
+[0;33m--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375a0d: panic_abort at /home/dylan/esp/esp-idf/components/esp_system/panic.c:469
+--- 0x40379d69: esp_system_abort at /home/dylan/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40380b39: abort at /home/dylan/esp/esp-idf/components/newlib/src/abort.c:38
+--- 0x40379d5f: _esp_error_check_failed at /home/dylan/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x420096fc: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:31 (discriminator 1)
+--- 0x4201b1dc: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037594c: esp_restart_noos at /home/dylan/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:162
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

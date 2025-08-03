@@ -1,0 +1,11 @@
+Command: /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.elf /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.elf -m '/home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dylan/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4200658b: uart_ll_get_txfifo_len at /home/dylan/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:422
+---  (inlined by) uart_tx_char at /home/dylan/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:190
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

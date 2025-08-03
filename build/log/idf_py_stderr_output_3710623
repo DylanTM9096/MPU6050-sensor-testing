@@ -1,0 +1,24 @@
+Command: /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.elf /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.elf -m '/home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dylan/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40048836: uart_tx_one_char_uart in ROM
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x4200b9d6: task_wdt_timeout_handling at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:436
+--- 0x4200bdec: task_wdt_isr at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:509
+--- 0x40377009: _xt_lowint1 at /home/dylan/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x42018e8e: i2c_ll_is_bus_busy at /home/dylan/esp/esp-idf/components/hal/esp32s3/include/hal/i2c_ll.h:577
+---  (inlined by) s_i2c_send_commands at /home/dylan/esp/esp-idf/components/esp_driver_i2c/i2c_master.c:543
+--- 0x4201909c: s_i2c_transaction_start at /home/dylan/esp/esp-idf/components/esp_driver_i2c/i2c_master.c:649
+--- 0x4201917e: s_i2c_synchronous_transaction at /home/dylan/esp/esp-idf/components/esp_driver_i2c/i2c_master.c:945
+--- 0x42019d4a: i2c_master_multi_buffer_transmit at /home/dylan/esp/esp-idf/components/esp_driver_i2c/i2c_master.c:1214
+--- 0x42019e26: i2c_master_transmit at /home/dylan/esp/esp-idf/components/esp_driver_i2c/i2c_master.c:1229
+--- 0x42009c81: mpu6050_config at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/MPU6050/mpu6050.c:56
+--- 0x4200968a: app_main at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/main.c:24
+--- 0x4201b154: main_task at /home/dylan/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m

@@ -1,0 +1,19 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/esp-idf/esptool_py && /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/Kalman/kalman.c.obj
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MPU6050/mpu6050.c.obj
+[6/10] Linking C static library esp-idf/main/libmain.a
+[7/10] Generating esp-idf/esp_system/ld/sections.ld
+[8/10] Linking CXX executable Real-Time-Project.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.9.dev7
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.bin
+[10/10] cd /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/esp-idf/esptool_py && /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/partition_table/partition-table.bin /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.bin
+Real-Time-Project.bin binary size 0x39020 bytes. Smallest app partition is 0x100000 bytes. 0xc6fe0 bytes (78%) free.

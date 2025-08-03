@@ -1,9 +1,10 @@
 #include "kalman.h"
 
+#define Q_angle 0.003f
+#define Q_bias 0.003f
+#define R_measure 0.001f
+
 #define RAD_TO_DEG 57.2957795f
-#define Q_angle 1.000f
-#define Q_bias 1.000f
-#define R_measure 1.000f
 
 static kalman_filter_t kf;
 static bool KALMAN_FILTER = KALMAN_NOT_CONFIGURED;
@@ -21,9 +22,9 @@ esp_err_t kalman_config(QueueHandle_t raw_queue, float initial_angle){
     return ESP_OK;
 }
 
-static void kalman_filter_update(float angle_measured, float rate_measured, float dt) {
+static void kalman_filter_update(float angle_measured, mpu6050_data_t imu_data_in, float dt) {
     // Predict
-    float rate = rate_measured - kf.bias;
+    float rate = imu_data_in.gyro_x - kf.bias;
     kf.angle += dt * rate;
 
     kf.P[0][0] += dt * (dt*kf.P[1][1] - kf.P[0][1] - kf.P[1][0] + Q_angle); // Alter constant addition value to change response
@@ -46,7 +47,7 @@ static void kalman_filter_update(float angle_measured, float rate_measured, floa
     kf.P[0][1] -= K0 * P01_temp;
     kf.P[1][0] -= K1 * P00_temp;
     kf.P[1][1] -= K1 * P01_temp;
-    ESP_LOGI("KF", "kf.angle= %.2f acc= %.2f", kf.angle, angle_measured);
+    ESP_LOGI("Data", "Accel: %.2f %.2f %.2f | Gyro: %.2f %.2f %.2f | Accel_angle: %.2f | Kalman_filter_angle: %.2f |", imu_data_in.accel_x, imu_data_in.accel_y, imu_data_in.accel_z, imu_data_in.gyro_x, imu_data_in.gyro_y, imu_data_in.gyro_z, angle_measured, kf.angle);
 }
 
 void kalman_filter_step(float dt) {
@@ -58,7 +59,7 @@ void kalman_filter_step(float dt) {
     mpu6050_data_t imu_data_in;
     if (xQueueReceive(raw_imu_queue, &imu_data_in, portMAX_DELAY) == pdPASS) {
         float acc_angle = atan2f(imu_data_in.accel_z, imu_data_in.accel_y) * RAD_TO_DEG;
-        kalman_filter_update(acc_angle, imu_data_in.gyro_x, dt); //Calculate the new tilt angle
+        kalman_filter_update(acc_angle, imu_data_in, dt); //Calculate the new tilt angle
     }
 }
 

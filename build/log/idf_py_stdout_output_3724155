@@ -1,0 +1,349 @@
+Command: /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.elf /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.elf -m '/home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dylan/esp/esp-idf/tools/idf.py'
+) sleep_gpio: Configure ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004883b
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dev-3568-g565cca2fee 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug  3 2025 10:22:14[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ba40h ( 47680) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=0001ba68 vaddr=3fc93200 size=02a10h ( 10768) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=0001e480 vaddr=40374000 size=01b98h (  7064) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1b9c4h (113092) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003b9ec vaddr=40375b98 size=0d5bch ( 54716) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=00048fb0 vaddr=600fe000 size=0001ch (    28) load[0m
+[0;32mI (149) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (149) boot: Disabling RNG early entropy source...[0m
+[0;32mI (160) cpu_start: Multicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (169) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     Real-Time-Project[0m
+[0;32mI (174) app_init: App version:      133ad78-dirty[0m
+[0;32mI (178) app_init: Compile time:     Aug  3 2025 11:10:21[0m
+[0;32mI (184) app_init: ELF file SHA256:  d91ba0fb5...[0m
+[0;32mI (188) app_init: ESP-IDF:          v5.5-dev-3568-g565cca2fee[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC96690 len 00053080 (332 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (222) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (227) heap_init: At 600FE01C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (236) spi_flash: flash io: dio[0m
+[0;33mW (239) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (251) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (257) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (264) main_task: Started on CPU0[0m
+[0;32mI (274) main_task: Calling app_main()[0m
+[1;31mE (274) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (274) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (284) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (294) MPU6050: Failed to wake MPU6050[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x4200969d
+file: "./main/main.c" line 24
+func: app_main
+expression: mpu6050_config(accel_scale, gyro_scale, rawImuQueue)
+
+abort() was called at PC 0x40379d5f on core 0
+
+
+Backtrace: 0x40375a0d:0x3fc98e60 0x40379d69:0x3fc98e80 0x40380b39:0x3fc98ea0 0x40379d5f:0x3fc98f10 0x4200969d:0x3fc98f40 0x4201b154:0x3fc98f70 0x4037a7c9:0x3fc98fa0
+
+
+
+
+ELF file SHA256: d91ba0fb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037594c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dev-3568-g565cca2fee 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Aug  3 2025 10:22:14[0m
+[0;32mI (24) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (32) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (36) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ba40h ( 47680) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=0001ba68 vaddr=3fc93200 size=02a10h ( 10768) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001e480 vaddr=40374000 size=01b98h (  7064) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1b9c4h (113092) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003b9ec vaddr=40375b98 size=0d5bch ( 54716) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=00048fb0 vaddr=600fe000 size=0001ch (    28) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (160) cpu_start: Multicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (169) app_init: Application information:[0m
+[0;32mI (169) app_init: Project name:     Real-Time-Project[0m
+[0;32mI (174) app_init: App version:      133ad78-dirty[0m
+[0;32mI (178) app_init: Compile time:     Aug  3 2025 11:10:21[0m
+[0;32mI (183) app_init: ELF file SHA256:  d91ba0fb5...[0m
+[0;32mI (187) app_init: ESP-IDF:          v5.5-dev-3568-g565cca2fee[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC96690 len 00053080 (332 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (221) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 600FE01C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: dio[0m
+[0;33mW (238) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (257) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (264) main_task: Started on CPU0[0m
+[0;32mI (274) main_task: Calling app_main()[0m
+[0;32mI (274) main_task: Returned from app_main()[0m
+[0;32mI (284) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.57 -0.97 0.27 |  Accel_angle: 88.67 | Kalman_filter_angle: 89.50 |[0m
+[0;32mI (294) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.65 -0.95 0.26 |  Accel_angle: 88.93 | Kalman_filter_angle: 89.50 |[0m
+[0;32mI (304) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.78 -1.05 0.21 |  Accel_angle: 88.42 | Kalman_filter_angle: 89.49 |[0m
+[0;32mI (314) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.61 -0.95 0.24 |  Accel_angle: 88.79 | Kalman_filter_angle: 89.47 |[0m
+[0;32mI (324) Data: Accel: 0.07 0.03 1.10 | Gyro: 0.72 -0.92 0.14 |  Accel_angle: 88.38 | Kalman_filter_angle: 89.44 |[0m
+[0;32mI (334) Data: Accel: 0.10 0.02 1.09 | Gyro: 0.81 -0.91 0.26 |  Accel_angle: 88.76 | Kalman_filter_angle: 89.42 |[0m
+[0;32mI (344) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.65 -0.82 0.24 |  Accel_angle: 88.87 | Kalman_filter_angle: 89.39 |[0m
+[0;32mI (354) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.71 -0.83 0.11 |  Accel_angle: 88.80 | Kalman_filter_angle: 89.37 |[0m
+[0;32mI (364) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.71 -0.78 0.31 |  Accel_angle: 88.94 | Kalman_filter_angle: 89.35 |[0m
+[0;32mI (374) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.79 -0.96 0.22 |  Accel_angle: 88.95 | Kalman_filter_angle: 89.33 |[0m
+[0;32mI (384) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.63 -0.95 0.15 |  Accel_angle: 88.70 | Kalman_filter_angle: 89.29 |[0m
+[0;32mI (394) Data: Accel: 0.10 0.02 1.11 | Gyro: 0.56 -0.97 0.24 |  Accel_angle: 88.76 | Kalman_filter_angle: 89.25 |[0m
+[0;32mI (404) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.64 -1.08 0.18 |  Accel_angle: 88.72 | Kalman_filter_angle: 89.21 |[0m
+[0;32mI (414) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.60 -0.83 0.31 |  Accel_angle: 88.60 | Kalman_filter_angle: 89.17 |[0m
+[0;32mI (424) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.76 -0.81 0.24 |  Accel_angle: 88.70 | Kalman_filter_angle: 89.13 |[0m
+[0;32mI (434) Data: Accel: 0.07 0.02 1.10 | Gyro: 0.70 -0.98 0.23 |  Accel_angle: 88.80 | Kalman_filter_angle: 89.11 |[0m
+[0;32mI (444) Data: Accel: 0.10 0.03 1.11 | Gyro: 0.73 -1.02 0.13 |  Accel_angle: 88.69 | Kalman_filter_angle: 89.08 |[0m
+[0;32mI (454) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.68 -1.07 0.16 |  Accel_angle: 88.93 | Kalman_filter_angle: 89.07 |[0m
+[0;32mI (464) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.71 -0.90 0.19 |  Accel_angle: 88.84 | Kalman_filter_angle: 89.06 |[0m
+[0;32mI (474) Data: Accel: 0.11 0.03 1.10 | Gyro: 0.55 -0.96 0.26 |  Accel_angle: 88.40 | Kalman_filter_angle: 89.00 |[0m
+[0;32mI (484) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.56 -1.08 0.32 |  Accel_angle: 88.53 | Kalman_filter_angle: 88.96 |[0m
+[0;32mI (494) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.69 -0.88 0.21 |  Accel_angle: 88.54 | Kalman_filter_angle: 88.93 |[0m
+[0;32mI (504) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.68 -0.89 0.32 |  Accel_angle: 88.42 | Kalman_filter_angle: 88.89 |[0m
+[0;32mI (514) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.79 -0.79 0.35 |  Accel_angle: 88.54 | Kalman_filter_angle: 88.86 |[0m
+[0;32mI (524) Data: Accel: 0.07 0.02 1.10 | Gyro: 0.66 -0.86 0.20 |  Accel_angle: 88.97 | Kalman_filter_angle: 88.88 |[0m
+[0;32mI (534) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.77 -0.93 0.23 |  Accel_angle: 88.60 | Kalman_filter_angle: 88.86 |[0m
+[0;32mI (544) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.62 -0.87 0.21 |  Accel_angle: 88.50 | Kalman_filter_angle: 88.83 |[0m
+[0;32mI (554) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.64 -0.92 0.15 |  Accel_angle: 88.48 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (564) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.81 -0.94 0.15 |  Accel_angle: 88.72 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (574) Data: Accel: 0.08 0.03 1.09 | Gyro: 0.69 -1.00 0.33 |  Accel_angle: 88.60 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (584) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.76 -0.90 0.32 |  Accel_angle: 88.57 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (594) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.76 -0.94 0.23 |  Accel_angle: 88.62 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (604) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.65 -0.99 0.29 |  Accel_angle: 88.85 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (614) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.60 -0.89 0.24 |  Accel_angle: 88.93 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (624) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.51 -0.96 0.22 |  Accel_angle: 88.38 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (634) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.70 -0.86 0.30 |  Accel_angle: 88.60 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (644) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.66 -1.07 0.27 |  Accel_angle: 88.75 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (654) Data: Accel: 0.07 0.02 1.10 | Gyro: 0.66 -0.88 0.37 |  Accel_angle: 89.14 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (664) Data: Accel: 0.10 0.02 1.09 | Gyro: 0.62 -0.82 0.22 |  Accel_angle: 89.00 | Kalman_filter_angle: 88.82 |[0m
+[0;32mI (674) Data: Accel: 0.10 0.02 1.11 | Gyro: 0.65 -1.08 0.29 |  Accel_angle: 88.91 | Kalman_filter_angle: 88.84 |[0m
+[0;32mI (684) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.56 -0.93 0.12 |  Accel_angle: 88.87 | Kalman_filter_angle: 88.84 |[0m
+[0;32mI (694) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.78 -0.83 0.17 |  Accel_angle: 88.62 | Kalman_filter_angle: 88.83 |[0m
+[0;32mI (704) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.62 -0.93 0.27 |  Accel_angle: 88.22 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (714) Data: Accel: 0.11 0.03 1.10 | Gyro: 0.78 -0.97 0.19 |  Accel_angle: 88.65 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (724) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.65 -0.97 0.28 |  Accel_angle: 88.53 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (734) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.60 -0.79 0.25 |  Accel_angle: 88.81 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (744) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.65 -1.07 0.25 |  Accel_angle: 88.93 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (754) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.75 -0.92 0.15 |  Accel_angle: 88.44 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (764) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.71 -0.89 0.40 |  Accel_angle: 88.75 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (774) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.68 -0.94 0.24 |  Accel_angle: 88.72 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (784) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.75 -0.92 0.20 |  Accel_angle: 89.00 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (794) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.59 -0.85 0.26 |  Accel_angle: 89.06 | Kalman_filter_angle: 88.82 |[0m
+[0;32mI (804) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.62 -0.83 0.31 |  Accel_angle: 88.54 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (814) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.69 -0.98 0.18 |  Accel_angle: 88.56 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (824) Data: Accel: 0.10 0.02 1.09 | Gyro: 0.54 -0.87 0.20 |  Accel_angle: 88.81 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (834) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.65 -0.87 0.24 |  Accel_angle: 88.48 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (844) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.70 -0.89 0.15 |  Accel_angle: 88.66 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (854) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.85 -0.94 0.13 |  Accel_angle: 88.41 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (864) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.65 -0.88 0.15 |  Accel_angle: 88.36 | Kalman_filter_angle: 88.70 |[0m
+[0;32mI (874) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.61 -0.98 0.18 |  Accel_angle: 88.91 | Kalman_filter_angle: 88.72 |[0m
+[0;32mI (884) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.69 -1.02 0.31 |  Accel_angle: 88.43 | Kalman_filter_angle: 88.70 |[0m
+[0;32mI (894) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.69 -0.89 0.30 |  Accel_angle: 88.80 | Kalman_filter_angle: 88.71 |[0m
+[0;32mI (904) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.72 -1.05 0.27 |  Accel_angle: 88.92 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (914) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.69 -0.82 0.32 |  Accel_angle: 88.67 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (924) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.82 -0.86 0.26 |  Accel_angle: 88.73 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (934) Data: Accel: 0.10 0.02 1.09 | Gyro: 0.73 -0.92 0.33 |  Accel_angle: 88.75 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (944) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.56 -0.92 0.30 |  Accel_angle: 89.01 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (954) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.56 -0.87 0.29 |  Accel_angle: 89.01 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (964) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.67 -0.89 0.30 |  Accel_angle: 88.60 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (974) Data: Accel: 0.09 0.03 1.11 | Gyro: 0.63 -0.85 0.21 |  Accel_angle: 88.60 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (984) Data: Accel: 0.07 0.02 1.10 | Gyro: 0.71 -1.02 0.24 |  Accel_angle: 88.71 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (994) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.66 -0.91 0.15 |  Accel_angle: 89.03 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (1004) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.66 -0.90 0.20 |  Accel_angle: 88.74 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (1014) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.59 -0.97 0.06 |  Accel_angle: 88.84 | Kalman_filter_angle: 88.81 |[0m
+[0;32mI (1024) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.60 -0.87 0.22 |  Accel_angle: 88.97 | Kalman_filter_angle: 88.83 |[0m
+[0;32mI (1034) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.69 -0.96 0.32 |  Accel_angle: 88.51 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (1044) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.62 -1.01 0.40 |  Accel_angle: 89.18 | Kalman_filter_angle: 88.84 |[0m
+[0;32mI (1054) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.69 -0.95 0.29 |  Accel_angle: 88.74 | Kalman_filter_angle: 88.84 |[0m
+[0;32mI (1064) Data: Accel: 0.08 0.03 1.10 | Gyro: 0.70 -0.82 0.21 |  Accel_angle: 88.45 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (1074) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.64 -0.92 0.21 |  Accel_angle: 88.41 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1084) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.64 -0.89 0.21 |  Accel_angle: 89.11 | Kalman_filter_angle: 88.81 |[0m
+[0;32mI (1094) Data: Accel: 0.09 0.03 1.11 | Gyro: 0.69 -0.95 0.28 |  Accel_angle: 88.62 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (1104) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.68 -1.03 0.19 |  Accel_angle: 88.72 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (1114) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.69 -0.83 0.24 |  Accel_angle: 88.57 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1124) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.63 -0.84 0.32 |  Accel_angle: 88.77 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (1134) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.78 -0.98 0.37 |  Accel_angle: 88.95 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (1144) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.66 -0.92 0.23 |  Accel_angle: 88.63 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (1154) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.64 -0.83 0.37 |  Accel_angle: 88.33 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1164) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.68 -0.91 0.21 |  Accel_angle: 88.57 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1174) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.62 -0.98 0.28 |  Accel_angle: 88.69 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1184) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.60 -1.04 0.08 |  Accel_angle: 88.61 | Kalman_filter_angle: 88.72 |[0m
+[0;32mI (1194) Data: Accel: 0.08 0.02 1.11 | Gyro: 0.58 -0.92 0.20 |  Accel_angle: 88.92 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (1204) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.69 -1.11 0.29 |  Accel_angle: 88.52 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1214) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.79 -0.98 0.11 |  Accel_angle: 89.02 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (1224) Data: Accel: 0.08 0.02 1.11 | Gyro: 0.59 -0.83 0.19 |  Accel_angle: 88.90 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (1234) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.67 -0.84 0.28 |  Accel_angle: 88.59 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (1244) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.65 -0.95 0.21 |  Accel_angle: 88.85 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1254) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.68 -0.94 0.34 |  Accel_angle: 88.61 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (1264) Data: Accel: 0.07 0.02 1.10 | Gyro: 0.65 -0.89 0.35 |  Accel_angle: 88.88 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (1274) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.62 -0.90 0.24 |  Accel_angle: 88.46 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1284) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.67 -0.89 0.15 |  Accel_angle: 88.63 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (1294) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.66 -0.80 0.22 |  Accel_angle: 88.84 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1304) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.62 -0.76 0.35 |  Accel_angle: 89.06 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (1314) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.73 -0.98 0.29 |  Accel_angle: 88.47 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (1324) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.67 -1.03 0.37 |  Accel_angle: 88.79 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1334) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.50 -0.86 0.21 |  Accel_angle: 88.80 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1344) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.97 -0.82 0.20 |  Accel_angle: 88.73 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1354) Data: Accel: 0.08 0.01 1.10 | Gyro: 0.82 -1.05 0.31 |  Accel_angle: 89.63 | Kalman_filter_angle: 88.87 |[0m
+[0;32mI (1364) Data: Accel: 0.10 0.02 1.11 | Gyro: -0.11 -0.41 0.15 |  Accel_angle: 88.86 | Kalman_filter_angle: 88.86 |[0m
+[0;32mI (1374) Data: Accel: 0.09 0.03 1.07 | Gyro: 0.76 -0.68 0.20 |  Accel_angle: 88.52 | Kalman_filter_angle: 88.83 |[0m
+[0;32mI (1384) Data: Accel: 0.07 0.02 1.09 | Gyro: 0.79 -0.82 0.14 |  Accel_angle: 88.94 | Kalman_filter_angle: 88.85 |[0m
+[0;32mI (1394) Data: Accel: 0.09 0.03 1.10 | Gyro: -0.11 -0.90 0.22 |  Accel_angle: 88.56 | Kalman_filter_angle: 88.82 |[0m
+[0;32mI (1404) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.92 -0.73 0.39 |  Accel_angle: 88.99 | Kalman_filter_angle: 88.84 |[0m
+[0;32mI (1414) Data: Accel: 0.10 0.02 1.11 | Gyro: 1.11 -0.98 0.34 |  Accel_angle: 88.79 | Kalman_filter_angle: 88.84 |[0m
+[0;32mI (1424) Data: Accel: 0.07 0.02 1.09 | Gyro: 0.50 -0.92 0.21 |  Accel_angle: 89.07 | Kalman_filter_angle: 88.87 |[0m
+[0;32mI (1434) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.76 -0.79 0.25 |  Accel_angle: 88.81 | Kalman_filter_angle: 88.87 |[0m
+[0;32mI (1444) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.79 -0.95 0.18 |  Accel_angle: 88.69 | Kalman_filter_angle: 88.85 |[0m
+[0;32mI (1454) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.46 -1.08 0.15 |  Accel_angle: 88.65 | Kalman_filter_angle: 88.84 |[0m
+[0;32mI (1464) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.52 -0.79 0.31 |  Accel_angle: 88.39 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (1474) Data: Accel: 0.08 0.03 1.10 | Gyro: 0.65 -0.79 0.20 |  Accel_angle: 88.58 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1484) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.56 -0.92 0.26 |  Accel_angle: 88.56 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1494) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.69 -0.87 0.16 |  Accel_angle: 88.43 | Kalman_filter_angle: 88.72 |[0m
+[0;32mI (1504) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.66 -0.74 0.25 |  Accel_angle: 88.94 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1514) Data: Accel: 0.07 0.03 1.10 | Gyro: 0.77 -1.10 0.14 |  Accel_angle: 88.63 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (1524) Data: Accel: 0.08 0.01 1.09 | Gyro: 0.66 -1.05 0.32 |  Accel_angle: 89.26 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (1534) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.52 -0.80 0.28 |  Accel_angle: 88.85 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (1544) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.67 -0.88 0.29 |  Accel_angle: 88.49 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (1554) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.53 -0.94 0.31 |  Accel_angle: 88.49 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1564) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.70 -1.00 0.24 |  Accel_angle: 89.02 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (1574) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.63 -0.93 0.23 |  Accel_angle: 88.83 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (1584) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.83 -0.86 0.35 |  Accel_angle: 88.42 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1594) Data: Accel: 0.11 0.03 1.10 | Gyro: 0.68 -0.80 0.29 |  Accel_angle: 88.51 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1604) Data: Accel: 0.10 0.02 1.11 | Gyro: 0.65 -0.90 0.27 |  Accel_angle: 88.72 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1614) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.88 -1.05 0.15 |  Accel_angle: 88.95 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (1624) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.65 -0.81 0.21 |  Accel_angle: 88.63 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1634) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.73 -1.02 0.20 |  Accel_angle: 88.53 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1644) Data: Accel: 0.09 0.03 1.11 | Gyro: 0.69 -0.97 0.33 |  Accel_angle: 88.56 | Kalman_filter_angle: 88.72 |[0m
+[0;32mI (1654) Data: Accel: 0.11 0.03 1.08 | Gyro: 0.73 -1.08 0.23 |  Accel_angle: 88.57 | Kalman_filter_angle: 88.70 |[0m
+[0;32mI (1664) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.87 -1.17 0.19 |  Accel_angle: 88.88 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1674) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.79 -0.85 0.22 |  Accel_angle: 88.93 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (1684) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.58 -0.87 0.25 |  Accel_angle: 88.92 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1694) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.63 -0.78 0.21 |  Accel_angle: 88.73 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (1704) Data: Accel: 0.09 0.03 1.09 | Gyro: 0.50 -0.90 0.24 |  Accel_angle: 88.67 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (1714) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.76 -0.94 0.13 |  Accel_angle: 88.45 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1724) Data: Accel: 0.10 0.02 1.10 | Gyro: 0.89 -1.08 0.15 |  Accel_angle: 88.80 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (1734) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.94 -1.08 0.11 |  Accel_angle: 88.66 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (1744) Data: Accel: 0.08 0.03 1.11 | Gyro: 0.48 -0.63 0.18 |  Accel_angle: 88.65 | Kalman_filter_angle: 88.73 |[0m
+[0;32mI (1754) Data: Accel: 0.10 0.03 1.12 | Gyro: 0.36 -0.38 0.44 |  Accel_angle: 88.30 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (1764) Data: Accel: 0.09 0.02 1.11 | Gyro: 0.02 -0.27 0.30 |  Accel_angle: 88.76 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (1774) Data: Accel: 0.09 0.03 1.08 | Gyro: 0.05 -0.10 0.27 |  Accel_angle: 88.32 | Kalman_filter_angle: 88.65 |[0m
+[0;32mI (1784) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.31 -0.26 0.29 |  Accel_angle: 88.81 | Kalman_filter_angle: 88.66 |[0m
+[0;32mI (1794) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.31 -0.45 0.17 |  Accel_angle: 88.98 | Kalman_filter_angle: 88.70 |[0m
+[0;32mI (1804) Data: Accel: 0.10 0.03 1.11 | Gyro: 0.21 -0.44 0.26 |  Accel_angle: 88.54 | Kalman_filter_angle: 88.68 |[0m
+[0;32mI (1814) Data: Accel: 0.10 0.03 1.08 | Gyro: 0.29 -0.44 0.15 |  Accel_angle: 88.55 | Kalman_filter_angle: 88.66 |[0m
+[0;32mI (1824) Data: Accel: 0.10 0.03 1.08 | Gyro: 0.43 -0.73 0.32 |  Accel_angle: 88.49 | Kalman_filter_angle: 88.65 |[0m
+[0;32mI (1834) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.60 -0.79 0.27 |  Accel_angle: 88.45 | Kalman_filter_angle: 88.63 |[0m
+[0;32mI (1844) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.55 -0.72 0.21 |  Accel_angle: 89.13 | Kalman_filter_angle: 88.68 |[0m
+[0;32mI (1854) Data: Accel: 0.07 0.02 1.09 | Gyro: 0.50 -0.61 0.31 |  Accel_angle: 88.77 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (1864) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.23 -0.40 0.08 |  Accel_angle: 88.35 | Kalman_filter_angle: 88.65 |[0m
+[0;32mI (1874) Data: Accel: 0.08 0.03 1.08 | Gyro: 0.63 -0.72 0.18 |  Accel_angle: 88.47 | Kalman_filter_angle: 88.63 |[0m
+[0;32mI (1884) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.74 -0.83 0.30 |  Accel_angle: 88.90 | Kalman_filter_angle: 88.66 |[0m
+[0;32mI (1894) Data: Accel: 0.10 0.02 1.09 | Gyro: 0.91 -1.07 0.18 |  Accel_angle: 88.69 | Kalman_filter_angle: 88.67 |[0m
+[0;32mI (1904) Data: Accel: 0.10 0.03 1.11 | Gyro: 1.00 -1.03 0.31 |  Accel_angle: 88.24 | Kalman_filter_angle: 88.63 |[0m
+[0;32mI (1914) Data: Accel: 0.09 0.03 1.11 | Gyro: -0.15 -0.60 0.26 |  Accel_angle: 88.54 | Kalman_filter_angle: 88.62 |[0m
+[0;32mI (1924) Data: Accel: 0.07 0.02 1.09 | Gyro: 0.19 -1.03 0.38 |  Accel_angle: 88.99 | Kalman_filter_angle: 88.65 |[0m
+[0;32mI (1934) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.63 -0.95 0.43 |  Accel_angle: 88.70 | Kalman_filter_angle: 88.66 |[0m
+[0;32mI (1944) Data: Accel: 0.09 0.03 1.08 | Gyro: 1.09 -0.98 0.31 |  Accel_angle: 88.63 | Kalman_filter_angle: 88.66 |[0m
+[0;32mI (1954) Data: Accel: 0.08 0.02 1.10 | Gyro: 1.02 -1.10 0.18 |  Accel_angle: 88.73 | Kalman_filter_angle: 88.67 |[0m
+[0;32mI (1964) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.67 -1.03 0.32 |  Accel_angle: 88.51 | Kalman_filter_angle: 88.66 |[0m
+[0;32mI (1974) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.38 -0.71 0.23 |  Accel_angle: 88.74 | Kalman_filter_angle: 88.67 |[0m
+[0;32mI (1984) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.69 -0.73 0.13 |  Accel_angle: 89.09 | Kalman_filter_angle: 88.71 |[0m
+[0;32mI (1994) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.83 -1.08 0.24 |  Accel_angle: 88.74 | Kalman_filter_angle: 88.72 |[0m
+[0;32mI (2004) Data: Accel: 0.10 0.03 1.11 | Gyro: 0.60 -1.11 0.22 |  Accel_angle: 88.35 | Kalman_filter_angle: 88.68 |[0m
+[0;32mI (2014) Data: Accel: 0.10 0.03 1.11 | Gyro: 0.63 -0.87 0.14 |  Accel_angle: 88.65 | Kalman_filter_angle: 88.68 |[0m
+[0;32mI (2024) Data: Accel: 0.09 0.02 1.11 | Gyro: 0.53 -0.98 0.24 |  Accel_angle: 88.81 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (2034) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.69 -0.84 0.25 |  Accel_angle: 88.61 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (2044) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.71 -1.21 0.27 |  Accel_angle: 88.72 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (2054) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.79 -1.12 0.37 |  Accel_angle: 88.60 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (2064) Data: Accel: 0.07 0.02 1.11 | Gyro: 0.76 -0.75 0.10 |  Accel_angle: 88.96 | Kalman_filter_angle: 88.72 |[0m
+[0;32mI (2074) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.67 -0.87 0.18 |  Accel_angle: 88.51 | Kalman_filter_angle: 88.70 |[0m
+[0;32mI (2084) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.65 -0.82 0.20 |  Accel_angle: 88.49 | Kalman_filter_angle: 88.68 |[0m
+[0;32mI (2094) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.64 -0.79 0.27 |  Accel_angle: 88.77 | Kalman_filter_angle: 88.69 |[0m
+[0;32mI (2104) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.69 -1.09 0.25 |  Accel_angle: 88.48 | Kalman_filter_angle: 88.67 |[0m
+[0;32mI (2114) Data: Accel: 0.07 0.02 1.10 | Gyro: 0.98 -1.02 0.36 |  Accel_angle: 88.74 | Kalman_filter_angle: 88.68 |[0m
+[0;32mI (2124) Data: Accel: 0.09 0.03 1.11 | Gyro: 0.75 -0.99 0.27 |  Accel_angle: 88.59 | Kalman_filter_angle: 88.67 |[0m
+[0;32mI (2134) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.51 -0.85 0.20 |  Accel_angle: 88.64 | Kalman_filter_angle: 88.67 |[0m
+[0;32mI (2144) Data: Accel: 0.08 0.01 1.09 | Gyro: 0.57 -0.90 0.23 |  Accel_angle: 89.29 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (2154) Data: Accel: 0.09 0.02 1.08 | Gyro: 0.73 -1.02 0.31 |  Accel_angle: 88.89 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (2164) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.89 -0.92 0.25 |  Accel_angle: 88.79 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (2174) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.66 -1.03 0.21 |  Accel_angle: 89.11 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (2184) Data: Accel: 0.08 0.03 1.10 | Gyro: 0.52 -0.76 0.18 |  Accel_angle: 88.50 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (2194) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.72 -0.99 0.15 |  Accel_angle: 88.59 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (2204) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.68 -0.97 0.34 |  Accel_angle: 88.67 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (2214) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.74 -1.04 0.27 |  Accel_angle: 88.81 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (2224) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.69 -0.97 0.21 |  Accel_angle: 88.54 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (2234) Data: Accel: 0.09 0.02 1.10 | Gyro: 0.85 -0.79 0.26 |  Accel_angle: 88.96 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (2244) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.62 -0.92 0.15 |  Accel_angle: 88.75 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (2254) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.58 -0.86 0.26 |  Accel_angle: 88.72 | Kalman_filter_angle: 88.76 |[0m
+[0;32mI (2264) Data: Accel: 0.10 0.03 1.10 | Gyro: 0.87 -0.96 0.24 |  Accel_angle: 88.49 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (2274) Data: Accel: 0.10 0.02 1.10 | Gyro: 0.52 -1.00 0.31 |  Accel_angle: 88.75 | Kalman_filter_angle: 88.74 |[0m
+[0;32mI (2284) Data: Accel: 0.09 0.02 1.09 | Gyro: 0.78 -0.92 0.24 |  Accel_angle: 88.81 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (2294) Data: Accel: 0.07 0.02 1.09 | Gyro: 0.57 -0.79 0.22 |  Accel_angle: 88.75 | Kalman_filter_angle: 88.75 |[0m
+[0;32mI (2304) Data: Accel: 0.08 0.02 1.10 | Gyro: 0.92 -0.98 0.34 |  Accel_angle: 88.87 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (2314) Data: Accel: 0.07 0.02 1.10 | Gyro: 0.44 -0.77 0.31 |  Accel_angle: 89.07 | Kalman_filter_angle: 88.80 |[0m
+[0;32mI (2324) Data: Accel: 0.09 0.02 1.08 | Gyro: 0.94 -1.31 0.10 |  Accel_angle: 88.68 | Kalman_filter_angle: 88.79 |[0m
+[0;32mI (2334) Data: Accel: 0.10 0.02 1.11 | Gyro: 0.66 -0.72 0.28 |  Accel_angle: 88.94 | Kalman_filter_angle: 88.81 |[0m
+[0;32mI (2344) Data: Accel: 0.10 0.03 1.09 | Gyro: 0.49 -0.96 0.32 |  Accel_angle: 88.53 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (2354) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.73 -0.95 0.39 |  Accel_angle: 88.62 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (2364) Data: Accel: 0.08 0.02 1.09 | Gyro: 0.42 -0.77 0.15 |  Accel_angle: 88.94 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (2374) Data: Accel: 0.09 0.03 1.10 | Gyro: 0.83 -0.79 0.24 |  Accel_angle: 88.57 | Kalman_filter_angle: 88.77 |[0m
+[0;32mI (2384) Data: Accel: 0.08 0.02 1.08 | Gyro: 0.29 -1.24 0.23 |  Accel_angle: 88.94 | Kalman_filter_angle: 88.78 |[0m
+[0;32mI (2394) Data: Accel: 0.11 0.05 1.14 | Gyro: 0.82 -0.92 0.28 |  Accel_angle: 87.70 | Kalman_filter_angle: 88.67 |[0m
+[0;32mI (2404) Data: Accel: 0.09 0.01 1.09 | Gyro: 0.75 -0.24 0.34 |  Accel_angle: 89.60 | Kalman_filter_angle: 88.77 |[0m

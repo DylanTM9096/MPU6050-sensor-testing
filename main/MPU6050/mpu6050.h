@@ -17,8 +17,8 @@
 #define MPU6050_REG_CONFIG         0x1A
 
 #define I2C_PORT       0
-#define I2C_SDA_PIN    GPIO_NUM_1
-#define I2C_SCL_PIN    GPIO_NUM_2
+#define I2C_SDA_PIN    GPIO_NUM_2
+#define I2C_SCL_PIN    GPIO_NUM_1
 #define I2C_FREQ_HZ    100000
 
 #define TAG_MPU6050 "MPU6050"

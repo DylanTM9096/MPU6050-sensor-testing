@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Real-Time-Project",
-    "project_version":    "133ad78-dirty",
+    "project_version":    "08211b8-dirty",
     "project_path":       "/home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing",
     "idf_path":           "/home/dylan/esp/esp-idf",
     "build_dir":          "/home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build",

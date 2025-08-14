@@ -1,0 +1,960 @@
+Command: /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.elf /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.elf -m '/home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dylan/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4201b15a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dev-3568-g565cca2fee 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Aug  3 2025 10:22:14[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ba70h ( 47728) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=0001ba98 vaddr=3fc93200 size=02a10h ( 10768) load[0m
+[0;32mI (99) esp_image: segment 2: paddr=0001e4b0 vaddr=40374000 size=01b68h (  7016) load[0m
+[0;32mI (104) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1ba3ch (113212) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003ba64 vaddr=40375b68 size=0d5ech ( 54764) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=00049058 vaddr=600fe000 size=0001ch (    28) load[0m
+[0;32mI (149) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (149) boot: Disabling RNG early entropy source...[0m
+[0;32mI (160) cpu_start: Multicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (169) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     Real-Time-Project[0m
+[0;32mI (174) app_init: App version:      08211b8-dirty[0m
+[0;32mI (179) app_init: Compile time:     Aug 14 2025 12:07:38[0m
+[0;32mI (184) app_init: ELF file SHA256:  05b0f6f00...[0m
+[0;32mI (188) app_init: ESP-IDF:          v5.5-dev-3568-g565cca2fee[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 3FC96690 len 00053080 (332 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (222) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (227) heap_init: At 600FE01C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (233) spi_flash: detected chip: generic[0m
+[0;32mI (236) spi_flash: flash io: dio[0m
+[0;33mW (239) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (251) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (257) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (264) main_task: Started on CPU0[0m
+[0;32mI (274) main_task: Calling app_main()[0m
+[0;32mI (274) main_task: Returned from app_main()[0m
+[1;31mE (284) MPU6050: Accel: 0.01 0.11 | Gyro: 0.08[0m
+[0;32mI (284) Data: Accel: 0.02 0.01 0.11 | Gyro: 0.08 -0.10 -0.02 | Accel_angle: 86.77 | Kalman_filter_angle: 89.50 |[0m
+[1;31mE (294) MPU6050: Accel: 0.01 0.21 | Gyro: 0.15[0m
+[0;32mI (294) Data: Accel: 0.03 0.01 0.21 | Gyro: 0.15 -0.17 -0.02 | Accel_angle: 86.94 | Kalman_filter_angle: 89.43 |[0m
+[1;31mE (304) MPU6050: Accel: 0.02 0.29 | Gyro: 0.21[0m
+[0;32mI (304) Data: Accel: 0.04 0.02 0.29 | Gyro: 0.21 -0.24 -0.04 | Accel_angle: 87.01 | Kalman_filter_angle: 89.23 |[0m
+[1;31mE (314) MPU6050: Accel: 0.02 0.37 | Gyro: 0.28[0m
+[0;32mI (324) Data: Accel: 0.05 0.02 0.37 | Gyro: 0.28 -0.30 -0.04 | Accel_angle: 87.07 | Kalman_filter_angle: 89.02 |[0m
+[1;31mE (334) MPU6050: Accel: 0.02 0.44 | Gyro: 0.33[0m
+[0;32mI (334) Data: Accel: 0.06 0.02 0.44 | Gyro: 0.33 -0.35 -0.05 | Accel_angle: 87.04 | Kalman_filter_angle: 88.75 |[0m
+[1;31mE (344) MPU6050: Accel: 0.03 0.51 | Gyro: 0.38[0m
+[0;32mI (344) Data: Accel: 0.07 0.03 0.51 | Gyro: 0.38 -0.41 -0.04 | Accel_angle: 86.99 | Kalman_filter_angle: 88.50 |[0m
+[1;31mE (354) MPU6050: Accel: 0.03 0.57 | Gyro: 0.41[0m
+[0;32mI (364) Data: Accel: 0.08 0.03 0.57 | Gyro: 0.41 -0.47 -0.06 | Accel_angle: 87.05 | Kalman_filter_angle: 88.29 |[0m
+[0;32mI (374) Data: Accel: 0.08 0.03 0.62 | Gyro: 0.45 -0.50 -0.06 | Accel_angle: 87.02 | Kalman_filter_angle: 88.07 |[0m
+[1;31mE (374) MPU6050: Accel: 0.03 0.62 | Gyro: 0.45[0m
+[1;31mE (384) MPU6050: Accel: 0.03 0.67 | Gyro: 0.50[0m
+[0;32mI (394) Data: Accel: 0.09 0.03 0.67 | Gyro: 0.50 -0.56 -0.07 | Accel_angle: 87.02 | Kalman_filter_angle: 87.90 |[0m
+[1;31mE (404) MPU6050: Accel: 0.04 0.71 | Gyro: 0.52[0m
+[0;32mI (404) Data: Accel: 0.10 0.04 0.71 | Gyro: 0.52 -0.60 -0.07 | Accel_angle: 86.99 | Kalman_filter_angle: 87.74 |[0m
+[1;31mE (414) MPU6050: Accel: 0.04 0.75 | Gyro: 0.54[0m
+[0;32mI (424) Data: Accel: 0.10 0.04 0.75 | Gyro: 0.54 -0.64 -0.08 | Accel_angle: 86.95 | Kalman_filter_angle: 87.60 |[0m
+[1;31mE (424) MPU6050: Accel: 0.04 0.78 | Gyro: 0.56[0m
+[0;32mI (434) Data: Accel: 0.11 0.04 0.78 | Gyro: 0.56 -0.67 -0.08 | Accel_angle: 86.96 | Kalman_filter_angle: 87.50 |[0m
+[0;32mI (444) Data: Accel: 0.11 0.04 0.81 | Gyro: 0.59 -0.71 -0.07 | Accel_angle: 86.96 | Kalman_filter_angle: 87.40 |[0m
+[1;31mE (444) MPU6050: Accel: 0.04 0.81 | Gyro: 0.59[0m
+[1;31mE (454) MPU6050: Accel: 0.04 0.84 | Gyro: 0.62[0m
+[0;32mI (464) Data: Accel: 0.11 0.04 0.84 | Gyro: 0.62 -0.75 -0.07 | Accel_angle: 87.00 | Kalman_filter_angle: 87.34 |[0m
+[1;31mE (474) MPU6050: Accel: 0.05 0.86 | Gyro: 0.63[0m
+[0;32mI (474) Data: Accel: 0.12 0.05 0.86 | Gyro: 0.63 -0.79 -0.06 | Accel_angle: 86.97 | Kalman_filter_angle: 87.27 |[0m
+[1;31mE (484) MPU6050: Accel: 0.05 0.89 | Gyro: 0.65[0m
+[0;32mI (494) Data: Accel: 0.12 0.05 0.89 | Gyro: 0.65 -0.81 -0.06 | Accel_angle: 86.95 | Kalman_filter_angle: 87.22 |[0m
+[1;31mE (504) MPU6050: Accel: 0.05 0.91 | Gyro: 0.65[0m
+[0;32mI (504) Data: Accel: 0.12 0.05 0.91 | Gyro: 0.65 -0.84 -0.06 | Accel_angle: 86.95 | Kalman_filter_angle: 87.17 |[0m
+[0;32mI (514) Data: Accel: 0.13 0.05 0.93 | Gyro: 0.67 -0.86 -0.08 | Accel_angle: 86.95 | Kalman_filter_angle: 87.14 |[0m
+[1;31mE (514) MPU6050: Accel: 0.05 0.93 | Gyro: 0.67[0m
+[1;31mE (524) MPU6050: Accel: 0.05 0.94 | Gyro: 0.69[0m
+[0;32mI (534) Data: Accel: 0.13 0.05 0.94 | Gyro: 0.69 -0.87 -0.07 | Accel_angle: 86.95 | Kalman_filter_angle: 87.11 |[0m
+[1;31mE (544) MPU6050: Accel: 0.05 0.96 | Gyro: 0.71[0m
+[0;32mI (544) Data: Accel: 0.13 0.05 0.96 | Gyro: 0.71 -0.86 -0.07 | Accel_angle: 86.95 | Kalman_filter_angle: 87.09 |[0m
+[1;31mE (554) MPU6050: Accel: 0.05 0.97 | Gyro: 0.71[0m
+[0;32mI (564) Data: Accel: 0.13 0.05 0.97 | Gyro: 0.71 -0.86 -0.07 | Accel_angle: 86.94 | Kalman_filter_angle: 87.06 |[0m
+[1;31mE (574) MPU6050: Accel: 0.05 0.98 | Gyro: 0.71[0m
+[0;32mI (574) Data: Accel: 0.13 0.05 0.98 | Gyro: 0.71 -0.85 -0.07 | Accel_angle: 86.93 | Kalman_filter_angle: 87.05 |[0m
+[0;32mI (584) Data: Accel: 0.13 0.05 0.99 | Gyro: 0.72 -0.87 -0.08 | Accel_angle: 86.93 | Kalman_filter_angle: 87.03 |[0m
+[1;31mE (584) MPU6050: Accel: 0.05 0.99 | Gyro: 0.72[0m
+[1;31mE (604) MPU6050: Accel: 0.05 1.00 | Gyro: 0.72[0m
+[0;32mI (604) Data: Accel: 0.14 0.05 1.00 | Gyro: 0.72 -0.85 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 87.01 |[0m
+[1;31mE (614) MPU6050: Accel: 0.05 1.01 | Gyro: 0.72[0m
+[0;32mI (614) Data: Accel: 0.14 0.05 1.01 | Gyro: 0.72 -0.86 -0.06 | Accel_angle: 86.91 | Kalman_filter_angle: 87.00 |[0m
+[1;31mE (624) MPU6050: Accel: 0.06 1.02 | Gyro: 0.72[0m
+[0;32mI (634) Data: Accel: 0.14 0.06 1.02 | Gyro: 0.72 -0.85 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.99 |[0m
+[1;31mE (644) MPU6050: Accel: 0.06 1.03 | Gyro: 0.72[0m
+[0;32mI (644) Data: Accel: 0.14 0.06 1.03 | Gyro: 0.72 -0.86 -0.09 | Accel_angle: 86.89 | Kalman_filter_angle: 86.98 |[0m
+[0;32mI (654) Data: Accel: 0.14 0.06 1.03 | Gyro: 0.73 -0.86 -0.08 | Accel_angle: 86.86 | Kalman_filter_angle: 86.96 |[0m
+[1;31mE (654) MPU6050: Accel: 0.06 1.03 | Gyro: 0.73[0m
+[1;31mE (674) MPU6050: Accel: 0.06 1.04 | Gyro: 0.73[0m
+[0;32mI (674) Data: Accel: 0.14 0.06 1.04 | Gyro: 0.73 -0.87 -0.09 | Accel_angle: 86.86 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (684) MPU6050: Accel: 0.06 1.04 | Gyro: 0.73[0m
+[0;32mI (684) Data: Accel: 0.14 0.06 1.04 | Gyro: 0.73 -0.89 -0.08 | Accel_angle: 86.84 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (694) MPU6050: Accel: 0.06 1.05 | Gyro: 0.74[0m
+[0;32mI (704) Data: Accel: 0.14 0.06 1.05 | Gyro: 0.74 -0.91 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (714) MPU6050: Accel: 0.06 1.05 | Gyro: 0.75[0m
+[0;32mI (714) Data: Accel: 0.14 0.06 1.05 | Gyro: 0.75 -0.91 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (724) MPU6050: Accel: 0.06 1.06 | Gyro: 0.75[0m
+[0;32mI (724) Data: Accel: 0.14 0.06 1.06 | Gyro: 0.75 -0.90 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (734) MPU6050: Accel: 0.06 1.06 | Gyro: 0.76[0m
+[0;32mI (744) Data: Accel: 0.14 0.06 1.06 | Gyro: 0.76 -0.88 -0.06 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (754) MPU6050: Accel: 0.06 1.06 | Gyro: 0.73[0m
+[0;32mI (754) Data: Accel: 0.14 0.06 1.06 | Gyro: 0.73 -0.89 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (764) MPU6050: Accel: 0.06 1.06 | Gyro: 0.72[0m
+[0;32mI (774) Data: Accel: 0.14 0.06 1.06 | Gyro: 0.72 -0.89 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (784) MPU6050: Accel: 0.06 1.07 | Gyro: 0.73[0m
+[0;32mI (784) Data: Accel: 0.14 0.06 1.07 | Gyro: 0.73 -0.88 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (794) MPU6050: Accel: 0.06 1.07 | Gyro: 0.73[0m
+[0;32mI (794) Data: Accel: 0.14 0.06 1.07 | Gyro: 0.73 -0.88 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (804) MPU6050: Accel: 0.06 1.07 | Gyro: 0.74[0m
+[0;32mI (814) Data: Accel: 0.15 0.06 1.07 | Gyro: 0.74 -0.88 -0.08 | Accel_angle: 86.88 | Kalman_filter_angle: 86.93 |[0m
+[0;32mI (824) Data: Accel: 0.14 0.06 1.07 | Gyro: 0.75 -0.88 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (824) MPU6050: Accel: 0.06 1.07 | Gyro: 0.75[0m
+[1;31mE (834) MPU6050: Accel: 0.06 1.07 | Gyro: 0.75[0m
+[0;32mI (844) Data: Accel: 0.15 0.06 1.07 | Gyro: 0.75 -0.88 -0.07 | Accel_angle: 86.86 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (854) MPU6050: Accel: 0.06 1.07 | Gyro: 0.75[0m
+[0;32mI (854) Data: Accel: 0.15 0.06 1.07 | Gyro: 0.75 -0.87 -0.06 | Accel_angle: 86.83 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (864) MPU6050: Accel: 0.06 1.08 | Gyro: 0.76[0m
+[0;32mI (864) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.76 -0.86 -0.07 | Accel_angle: 86.88 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (874) MPU6050: Accel: 0.06 1.08 | Gyro: 0.78[0m
+[0;32mI (884) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.78 -0.87 -0.08 | Accel_angle: 86.88 | Kalman_filter_angle: 86.91 |[0m
+[0;32mI (894) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.76 -0.85 -0.08 | Accel_angle: 86.86 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (894) MPU6050: Accel: 0.06 1.08 | Gyro: 0.76[0m
+[1;31mE (904) MPU6050: Accel: 0.06 1.08 | Gyro: 0.74[0m
+[0;32mI (914) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.74 -0.86 -0.09 | Accel_angle: 86.84 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (924) MPU6050: Accel: 0.06 1.08 | Gyro: 0.74[0m
+[0;32mI (924) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.74 -0.83 -0.09 | Accel_angle: 86.84 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (934) MPU6050: Accel: 0.06 1.08 | Gyro: 0.73[0m
+[0;32mI (944) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.73 -0.83 -0.08 | Accel_angle: 86.85 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (954) MPU6050: Accel: 0.06 1.08 | Gyro: 0.76[0m
+[0;32mI (954) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.76 -0.84 -0.08 | Accel_angle: 86.86 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (964) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.75 -0.84 -0.08 | Accel_angle: 86.85 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (964) MPU6050: Accel: 0.06 1.08 | Gyro: 0.75[0m
+[1;31mE (974) MPU6050: Accel: 0.06 1.08 | Gyro: 0.76[0m
+[0;32mI (984) Data: Accel: 0.15 0.06 1.08 | Gyro: 0.76 -0.86 -0.09 | Accel_angle: 86.85 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (994) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (994) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.87 -0.09 | Accel_angle: 86.85 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (1004) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1014) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.86 -0.10 | Accel_angle: 86.84 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (1024) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1024) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.87 -0.10 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (1034) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.88 -0.11 | Accel_angle: 86.86 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1034) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[1;31mE (1054) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1054) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.89 -0.11 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1064) MPU6050: Accel: 0.06 1.09 | Gyro: 0.81[0m
+[0;32mI (1064) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.81 -0.92 -0.10 | Accel_angle: 86.86 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1074) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1084) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.91 -0.11 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1094) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1094) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.90 -0.11 | Accel_angle: 86.89 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (1104) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1114) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.92 -0.10 | Accel_angle: 86.86 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (1124) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1124) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.90 -0.09 | Accel_angle: 86.86 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (1134) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.91 -0.08 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1134) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[1;31mE (1154) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1154) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.91 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (1164) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1164) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.90 -0.08 | Accel_angle: 86.88 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (1174) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1184) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.91 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (1194) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1194) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.92 -0.06 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (1204) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1204) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.91 -0.05 | Accel_angle: 86.88 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (1214) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1224) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.89 -0.05 | Accel_angle: 86.91 | Kalman_filter_angle: 86.91 |[0m
+[0;32mI (1234) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.86 -0.04 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1234) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[1;31mE (1244) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1254) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.86 -0.03 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1264) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1264) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.86 -0.04 | Accel_angle: 86.88 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1274) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1284) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.88 -0.03 | Accel_angle: 86.89 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1294) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1294) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.89 -0.04 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1304) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1304) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.89 -0.04 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1314) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1324) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.90 -0.04 | Accel_angle: 86.93 | Kalman_filter_angle: 86.93 |[0m
+[0;32mI (1334) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.90 -0.05 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1334) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[1;31mE (1344) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1354) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.92 -0.05 | Accel_angle: 86.89 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1364) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1364) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.91 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1374) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1384) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.91 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1394) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1394) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.92 -0.08 | Accel_angle: 86.90 | Kalman_filter_angle: 86.93 |[0m
+[0;32mI (1404) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.90 -0.08 | Accel_angle: 86.88 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1404) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[1;31mE (1424) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1424) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.90 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (1434) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1434) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.89 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1444) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1454) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.88 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1464) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (1464) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1474) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (1484) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.89 -0.09 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (1494) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (1494) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.09 | Accel_angle: 86.86 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (1504) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.89 -0.09 | Accel_angle: 86.85 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (1504) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[1;31mE (1524) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (1524) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.88 -0.09 | Accel_angle: 86.88 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (1534) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1534) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.88 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (1544) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1554) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.89 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (1564) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1564) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.89 -0.08 | Accel_angle: 86.86 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (1574) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1584) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.88 -0.07 | Accel_angle: 86.88 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (1594) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1594) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.88 -0.07 | Accel_angle: 86.88 | Kalman_filter_angle: 86.90 |[0m
+[0;32mI (1604) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.07 | Accel_angle: 86.85 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1604) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (1624) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1624) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.87 -0.09 | Accel_angle: 86.84 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1634) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (1634) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.09 | Accel_angle: 86.85 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (1644) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (1654) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.86 -0.08 | Accel_angle: 86.86 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (1664) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (1664) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.86 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (1674) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (1674) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.85 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1684) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (1694) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.07 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (1704) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.07 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (1704) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[1;31mE (1714) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (1724) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.84 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (1734) MPU6050: Accel: 0.06 1.09 | Gyro: 0.68[0m
+[0;32mI (1734) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.68 -0.88 -0.06 | Accel_angle: 86.85 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (1744) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (1754) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.91 -0.06 | Accel_angle: 86.80 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (1764) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1764) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.93 -0.07 | Accel_angle: 86.84 | Kalman_filter_angle: 86.87 |[0m
+[0;32mI (1774) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.90 -0.08 | Accel_angle: 86.82 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (1774) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (1794) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (1794) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.89 -0.07 | Accel_angle: 86.82 | Kalman_filter_angle: 86.85 |[0m
+[0;32mI (1804) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.88 -0.07 | Accel_angle: 86.78 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (1804) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[1;31mE (1814) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1824) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.92 -0.06 | Accel_angle: 86.79 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (1834) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1834) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.90 -0.05 | Accel_angle: 86.82 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (1844) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1854) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.91 -0.06 | Accel_angle: 86.83 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (1864) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1864) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.90 -0.07 | Accel_angle: 86.82 | Kalman_filter_angle: 86.84 |[0m
+[0;32mI (1874) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.81 -0.91 -0.07 | Accel_angle: 86.81 | Kalman_filter_angle: 86.83 |[0m
+[1;31mE (1874) MPU6050: Accel: 0.06 1.09 | Gyro: 0.81[0m
+[1;31mE (1894) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1894) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.89 -0.04 | Accel_angle: 86.81 | Kalman_filter_angle: 86.83 |[0m
+[1;31mE (1904) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1904) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.88 -0.05 | Accel_angle: 86.83 | Kalman_filter_angle: 86.83 |[0m
+[1;31mE (1914) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1924) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.88 -0.04 | Accel_angle: 86.83 | Kalman_filter_angle: 86.83 |[0m
+[1;31mE (1934) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (1934) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.87 -0.03 | Accel_angle: 86.83 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (1944) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (1954) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.87 -0.05 | Accel_angle: 86.85 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (1964) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (1964) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.88 -0.05 | Accel_angle: 86.87 | Kalman_filter_angle: 86.85 |[0m
+[0;32mI (1974) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.87 -0.05 | Accel_angle: 86.87 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (1974) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[1;31mE (1994) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (1994) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.05 | Accel_angle: 86.86 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (2004) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2004) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.05 | Accel_angle: 86.85 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (2014) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2024) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.05 | Accel_angle: 86.86 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (2034) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2034) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.05 | Accel_angle: 86.85 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (2044) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2044) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.04 | Accel_angle: 86.83 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (2054) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2064) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.04 | Accel_angle: 86.83 | Kalman_filter_angle: 86.85 |[0m
+[0;32mI (2074) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.05 | Accel_angle: 86.84 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (2074) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[1;31mE (2084) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2094) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.04 | Accel_angle: 86.84 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (2104) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2104) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.86 -0.05 | Accel_angle: 86.83 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (2114) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2124) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.85 -0.04 | Accel_angle: 86.81 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2134) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2134) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.04 | Accel_angle: 86.82 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2144) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (2144) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.04 | Accel_angle: 86.82 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2154) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2164) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.84 -0.05 | Accel_angle: 86.84 | Kalman_filter_angle: 86.84 |[0m
+[0;32mI (2174) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.86 -0.03 | Accel_angle: 86.85 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2174) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[1;31mE (2184) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2194) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.84 -0.03 | Accel_angle: 86.86 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (2204) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2204) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.86 -0.02 | Accel_angle: 86.84 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (2214) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2224) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.03 | Accel_angle: 86.84 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (2234) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2234) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.04 | Accel_angle: 86.83 | Kalman_filter_angle: 86.85 |[0m
+[0;32mI (2244) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.86 -0.03 | Accel_angle: 86.84 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2244) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (2264) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2264) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.04 | Accel_angle: 86.83 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2274) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2274) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.86 -0.03 | Accel_angle: 86.81 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2284) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2294) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.86 -0.04 | Accel_angle: 86.84 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2304) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (2304) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.88 -0.03 | Accel_angle: 86.82 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2314) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2324) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.02 | Accel_angle: 86.81 | Kalman_filter_angle: 86.83 |[0m
+[1;31mE (2334) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2334) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.04 | Accel_angle: 86.83 | Kalman_filter_angle: 86.84 |[0m
+[0;32mI (2344) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.85 -0.05 | Accel_angle: 86.82 | Kalman_filter_angle: 86.83 |[0m
+[1;31mE (2344) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (2364) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2364) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.06 | Accel_angle: 86.85 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2374) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2374) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.86 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (2384) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (2394) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.84 -0.09 | Accel_angle: 86.87 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (2404) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (2404) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.87 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (2414) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2414) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.85 -0.10 | Accel_angle: 86.88 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (2424) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2434) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.85 -0.11 | Accel_angle: 86.88 | Kalman_filter_angle: 86.86 |[0m
+[0;32mI (2444) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.89 -0.11 | Accel_angle: 86.90 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (2444) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (2454) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2464) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (2474) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2474) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (2484) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2494) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (2504) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2504) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (2514) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2514) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.86 -0.06 | Accel_angle: 86.89 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (2524) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2534) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.07 | Accel_angle: 86.93 | Kalman_filter_angle: 86.90 |[0m
+[0;32mI (2544) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2544) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (2554) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (2564) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.85 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2574) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2574) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.84 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2584) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2594) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.85 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2604) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (2604) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.85 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (2614) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.83 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2614) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[1;31mE (2634) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (2634) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.83 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2644) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (2644) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.83 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2654) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (2664) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.84 -0.06 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2674) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (2674) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.83 -0.06 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2684) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (2694) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.83 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2704) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (2704) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.87 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.90 |[0m
+[0;32mI (2714) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.86 -0.08 | Accel_angle: 86.88 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (2714) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[1;31mE (2734) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2734) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.86 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (2744) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (2744) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.06 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2754) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (2764) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2774) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2774) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.88 -0.08 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2784) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (2784) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.89 -0.07 | Accel_angle: 86.95 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2794) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2804) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.88 -0.07 | Accel_angle: 86.94 | Kalman_filter_angle: 86.93 |[0m
+[0;32mI (2814) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.89 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (2814) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[1;31mE (2824) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2834) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.88 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (2844) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (2844) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.90 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (2854) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2864) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.91 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (2874) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2874) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.90 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (2884) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (2884) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.91 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (2894) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (2904) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.88 -0.10 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (2914) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.88 -0.10 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2914) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (2924) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (2934) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.86 -0.09 | Accel_angle: 86.89 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2944) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (2944) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.83 -0.10 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (2954) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (2964) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.84 -0.11 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2974) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (2974) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.84 -0.10 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[0;32mI (2984) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.10 | Accel_angle: 86.91 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (2984) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (3004) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3004) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.10 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3014) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3014) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3024) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3034) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.08 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3044) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3044) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.83 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3054) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3064) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.83 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3074) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3074) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.84 -0.10 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (3084) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.84 -0.10 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3084) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (3104) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3104) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.11 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3114) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3114) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3124) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (3134) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.85 -0.09 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3144) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3144) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.08 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3154) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3164) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.88 -0.09 | Accel_angle: 86.88 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3174) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3174) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.87 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.90 |[0m
+[0;32mI (3184) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.85 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3184) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (3204) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3204) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.84 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3214) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3214) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.84 -0.08 | Accel_angle: 86.90 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3224) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3234) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3244) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3244) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.07 | Accel_angle: 86.93 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3254) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3254) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3264) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3274) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.88 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[0;32mI (3284) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.08 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3284) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (3294) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3304) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.08 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3314) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3314) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.87 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3324) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3334) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.87 -0.09 | Accel_angle: 86.87 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3344) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3344) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.86 -0.09 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3354) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3354) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.83 -0.09 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3364) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3374) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.85 -0.10 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (3384) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.08 | Accel_angle: 86.86 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3384) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (3394) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3404) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.85 -0.07 | Accel_angle: 86.86 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3414) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3414) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3424) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3434) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.80 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3444) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3444) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.81 -0.09 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[0;32mI (3454) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.80 -0.09 | Accel_angle: 86.86 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3454) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[1;31mE (3474) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (3474) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.82 -0.09 | Accel_angle: 86.88 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3484) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3484) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.09 | Accel_angle: 86.88 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3494) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3504) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.83 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3514) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3514) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.83 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3524) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3534) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.84 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3544) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3544) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.09 | Accel_angle: 86.91 | Kalman_filter_angle: 86.90 |[0m
+[0;32mI (3554) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.86 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3554) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (3574) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3574) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.85 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3584) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (3584) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.07 | Accel_angle: 86.94 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3594) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (3604) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.83 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (3614) MPU6050: Accel: 0.06 1.09 | Gyro: 0.68[0m
+[0;32mI (3614) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.68 -0.81 -0.05 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3624) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[0;32mI (3624) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.81 -0.05 | Accel_angle: 86.86 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3634) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3644) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.08 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (3654) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.08 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3654) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (3664) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3674) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3684) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3684) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.04 | Accel_angle: 86.90 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3694) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (3704) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.03 | Accel_angle: 86.91 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3714) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3714) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.84 -0.05 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3724) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (3724) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.84 -0.05 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3734) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (3744) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (3754) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.05 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3754) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (3764) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (3774) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.83 -0.06 | Accel_angle: 86.89 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3784) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3784) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.79 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3794) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (3804) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.78 -0.06 | Accel_angle: 86.89 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3814) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (3814) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.80 -0.06 | Accel_angle: 86.91 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (3824) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.79 -0.04 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3824) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[1;31mE (3844) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (3844) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.83 -0.05 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3854) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (3854) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.85 -0.05 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3864) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (3874) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.87 -0.04 | Accel_angle: 86.89 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (3884) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[0;32mI (3884) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.87 -0.05 | Accel_angle: 86.90 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3894) MPU6050: Accel: 0.06 1.09 | Gyro: 0.68[0m
+[0;32mI (3904) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.68 -0.89 -0.06 | Accel_angle: 86.90 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3914) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[0;32mI (3914) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.88 -0.05 | Accel_angle: 86.89 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (3924) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.67 -0.89 -0.05 | Accel_angle: 86.91 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (3924) MPU6050: Accel: 0.06 1.09 | Gyro: 0.67[0m
+[1;31mE (3944) MPU6050: Accel: 0.06 1.09 | Gyro: 0.67[0m
+[0;32mI (3944) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.67 -0.91 -0.07 | Accel_angle: 86.94 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (3954) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (3954) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.93 -0.08 | Accel_angle: 86.94 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3964) MPU6050: Accel: 0.06 1.09 | Gyro: 0.68[0m
+[0;32mI (3974) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.68 -0.94 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3984) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[0;32mI (3984) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.93 -0.06 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (3994) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (3994) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.89 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (4004) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (4014) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.90 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.91 |[0m
+[0;32mI (4024) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.88 -0.06 | Accel_angle: 86.91 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (4024) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[1;31mE (4034) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (4044) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.85 -0.06 | Accel_angle: 86.87 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (4054) MPU6050: Accel: 0.06 1.09 | Gyro: 0.64[0m
+[0;32mI (4054) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.64 -0.85 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (4064) MPU6050: Accel: 0.06 1.09 | Gyro: 0.70[0m
+[0;32mI (4074) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.70 -0.88 -0.06 | Accel_angle: 86.86 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (4084) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (4084) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.90 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (4094) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (4094) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.90 -0.07 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (4104) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (4114) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.90 -0.08 | Accel_angle: 86.86 | Kalman_filter_angle: 86.89 |[0m
+[0;32mI (4124) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.06 | Accel_angle: 86.85 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (4124) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[1;31mE (4134) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4144) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.85 -0.06 | Accel_angle: 86.86 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (4154) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4154) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.85 -0.06 | Accel_angle: 86.87 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (4164) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4174) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.84 -0.06 | Accel_angle: 86.85 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (4184) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4184) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.06 | Accel_angle: 86.85 | Kalman_filter_angle: 86.87 |[0m
+[0;32mI (4194) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.84 -0.06 | Accel_angle: 86.86 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (4194) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (4214) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (4214) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.82 -0.05 | Accel_angle: 86.85 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (4224) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4224) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.05 | Accel_angle: 86.85 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (4234) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4244) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.83 -0.06 | Accel_angle: 86.84 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (4254) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4254) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.07 | Accel_angle: 86.86 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (4264) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (4274) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.81 -0.07 | Accel_angle: 86.87 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (4284) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4284) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.87 |[0m
+[0;32mI (4294) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.83 -0.09 | Accel_angle: 86.93 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (4294) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[1;31mE (4314) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4314) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.81 -0.09 | Accel_angle: 86.91 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (4324) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4324) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.81 -0.09 | Accel_angle: 86.92 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (4334) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4344) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.81 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (4354) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4354) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.79 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (4364) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4374) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.80 -0.06 | Accel_angle: 86.90 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (4384) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4384) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.80 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.90 |[0m
+[0;32mI (4394) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.81 -0.04 | Accel_angle: 86.93 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (4394) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (4414) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4414) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.79 -0.05 | Accel_angle: 86.94 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (4424) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (4424) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.78 -0.05 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (4434) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (4444) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.80 -0.05 | Accel_angle: 86.94 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (4454) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (4454) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.81 -0.05 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (4464) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (4464) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.81 -0.05 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (4474) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (4484) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.82 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (4494) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.83 -0.04 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4494) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[1;31mE (4504) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (4514) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.84 -0.03 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (4524) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (4524) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.82 -0.03 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (4534) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (4544) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.79 -0.03 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (4554) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (4554) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.76 -0.04 | Accel_angle: 86.95 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4564) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (4564) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.75 -0.05 | Accel_angle: 86.95 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4574) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4584) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.76 -0.05 | Accel_angle: 86.96 | Kalman_filter_angle: 86.94 |[0m
+[0;32mI (4594) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.76 -0.06 | Accel_angle: 86.97 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4594) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (4604) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (4614) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.74 -0.07 | Accel_angle: 86.96 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4624) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[0;32mI (4624) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.73 -0.07 | Accel_angle: 86.96 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4634) MPU6050: Accel: 0.06 1.09 | Gyro: 0.68[0m
+[0;32mI (4644) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.68 -0.68 -0.07 | Accel_angle: 86.95 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4654) MPU6050: Accel: 0.06 1.09 | Gyro: 0.64[0m
+[0;32mI (4654) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.64 -0.66 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.94 |[0m
+[0;32mI (4664) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.62 -0.65 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4664) MPU6050: Accel: 0.06 1.09 | Gyro: 0.62[0m
+[1;31mE (4684) MPU6050: Accel: 0.06 1.09 | Gyro: 0.60[0m
+[0;32mI (4684) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.60 -0.63 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4694) MPU6050: Accel: 0.06 1.09 | Gyro: 0.59[0m
+[0;32mI (4694) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.59 -0.61 -0.09 | Accel_angle: 86.94 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4704) MPU6050: Accel: 0.06 1.09 | Gyro: 0.57[0m
+[0;32mI (4714) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.57 -0.62 -0.09 | Accel_angle: 86.94 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4724) MPU6050: Accel: 0.06 1.09 | Gyro: 0.55[0m
+[0;32mI (4724) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.55 -0.59 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4734) MPU6050: Accel: 0.06 1.09 | Gyro: 0.52[0m
+[0;32mI (4744) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.52 -0.58 -0.08 | Accel_angle: 86.94 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4754) MPU6050: Accel: 0.06 1.09 | Gyro: 0.54[0m
+[0;32mI (4754) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.54 -0.61 -0.09 | Accel_angle: 86.94 | Kalman_filter_angle: 86.93 |[0m
+[0;32mI (4764) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.54 -0.64 -0.11 | Accel_angle: 86.95 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4764) MPU6050: Accel: 0.06 1.09 | Gyro: 0.54[0m
+[1;31mE (4784) MPU6050: Accel: 0.06 1.09 | Gyro: 0.54[0m
+[0;32mI (4784) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.54 -0.68 -0.10 | Accel_angle: 86.95 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4794) MPU6050: Accel: 0.06 1.09 | Gyro: 0.57[0m
+[0;32mI (4794) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.57 -0.68 -0.10 | Accel_angle: 86.97 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4804) MPU6050: Accel: 0.06 1.09 | Gyro: 0.57[0m
+[0;32mI (4814) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.57 -0.69 -0.10 | Accel_angle: 86.94 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4824) MPU6050: Accel: 0.06 1.09 | Gyro: 0.60[0m
+[0;32mI (4824) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.60 -0.73 -0.11 | Accel_angle: 86.95 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4834) MPU6050: Accel: 0.06 1.09 | Gyro: 0.58[0m
+[0;32mI (4834) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.58 -0.71 -0.09 | Accel_angle: 86.95 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4844) MPU6050: Accel: 0.06 1.09 | Gyro: 0.59[0m
+[0;32mI (4854) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.59 -0.75 -0.10 | Accel_angle: 86.95 | Kalman_filter_angle: 86.94 |[0m
+[0;32mI (4864) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.61 -0.75 -0.09 | Accel_angle: 86.97 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4864) MPU6050: Accel: 0.06 1.09 | Gyro: 0.61[0m
+[1;31mE (4874) MPU6050: Accel: 0.06 1.09 | Gyro: 0.63[0m
+[0;32mI (4884) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.63 -0.78 -0.09 | Accel_angle: 86.96 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4894) MPU6050: Accel: 0.06 1.09 | Gyro: 0.62[0m
+[0;32mI (4894) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.62 -0.78 -0.09 | Accel_angle: 86.95 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4904) MPU6050: Accel: 0.06 1.09 | Gyro: 0.64[0m
+[0;32mI (4914) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.64 -0.78 -0.09 | Accel_angle: 86.94 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4924) MPU6050: Accel: 0.06 1.09 | Gyro: 0.65[0m
+[0;32mI (4924) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.65 -0.78 -0.08 | Accel_angle: 86.95 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4934) MPU6050: Accel: 0.06 1.09 | Gyro: 0.66[0m
+[0;32mI (4934) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.66 -0.79 -0.10 | Accel_angle: 86.94 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (4944) MPU6050: Accel: 0.06 1.09 | Gyro: 0.66[0m
+[0;32mI (4954) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.66 -0.78 -0.12 | Accel_angle: 86.92 | Kalman_filter_angle: 86.94 |[0m
+[0;32mI (4964) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.66 -0.80 -0.10 | Accel_angle: 86.91 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (4964) MPU6050: Accel: 0.06 1.09 | Gyro: 0.66[0m
+[1;31mE (4974) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[0;32mI (4984) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.79 -0.09 | Accel_angle: 86.90 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (4994) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (4994) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.80 -0.09 | Accel_angle: 86.91 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (5004) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (5014) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.80 -0.10 | Accel_angle: 86.93 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (5024) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (5024) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.79 -0.09 | Accel_angle: 86.96 | Kalman_filter_angle: 86.93 |[0m
+[0;32mI (5034) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.10 | Accel_angle: 86.97 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (5034) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (5054) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5054) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.81 -0.10 | Accel_angle: 86.96 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (5064) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (5064) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.81 -0.09 | Accel_angle: 86.96 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (5074) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (5084) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.07 | Accel_angle: 86.98 | Kalman_filter_angle: 86.96 |[0m
+[1;31mE (5094) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5094) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.81 -0.07 | Accel_angle: 86.98 | Kalman_filter_angle: 86.96 |[0m
+[1;31mE (5104) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (5114) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.06 | Accel_angle: 87.00 | Kalman_filter_angle: 86.97 |[0m
+[1;31mE (5124) MPU6050: Accel: 0.06 1.09 | Gyro: 0.67[0m
+[0;32mI (5124) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.67 -0.85 -0.06 | Accel_angle: 87.00 | Kalman_filter_angle: 86.98 |[0m
+[0;32mI (5134) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.67 -0.81 -0.06 | Accel_angle: 86.95 | Kalman_filter_angle: 86.97 |[0m
+[1;31mE (5134) MPU6050: Accel: 0.06 1.09 | Gyro: 0.67[0m
+[1;31mE (5154) MPU6050: Accel: 0.06 1.09 | Gyro: 0.71[0m
+[0;32mI (5154) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.71 -0.79 -0.06 | Accel_angle: 86.97 | Kalman_filter_angle: 86.97 |[0m
+[1;31mE (5164) MPU6050: Accel: 0.06 1.09 | Gyro: 0.69[0m
+[0;32mI (5164) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.69 -0.82 -0.05 | Accel_angle: 86.95 | Kalman_filter_angle: 86.97 |[0m
+[1;31mE (5174) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5184) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.05 | Accel_angle: 86.94 | Kalman_filter_angle: 86.96 |[0m
+[1;31mE (5194) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (5194) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.89 -0.05 | Accel_angle: 86.94 | Kalman_filter_angle: 86.96 |[0m
+[1;31mE (5204) MPU6050: Accel: 0.06 1.09 | Gyro: 0.81[0m
+[0;32mI (5204) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.81 -0.90 -0.04 | Accel_angle: 86.94 | Kalman_filter_angle: 86.96 |[0m
+[1;31mE (5214) MPU6050: Accel: 0.06 1.09 | Gyro: 0.81[0m
+[0;32mI (5224) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.81 -0.92 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.95 |[0m
+[0;32mI (5234) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.84 -0.98 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (5234) MPU6050: Accel: 0.06 1.09 | Gyro: 0.84[0m
+[1;31mE (5244) MPU6050: Accel: 0.06 1.09 | Gyro: 0.84[0m
+[0;32mI (5254) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.84 -1.00 -0.08 | Accel_angle: 86.94 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (5264) MPU6050: Accel: 0.06 1.09 | Gyro: 0.83[0m
+[0;32mI (5264) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.83 -1.00 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.95 |[0m
+[1;31mE (5274) MPU6050: Accel: 0.06 1.09 | Gyro: 0.81[0m
+[0;32mI (5284) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.81 -0.99 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (5294) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (5294) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.95 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (5304) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (5304) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.90 -0.06 | Accel_angle: 86.89 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5314) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (5324) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.91 -0.05 | Accel_angle: 86.88 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (5334) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.89 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (5334) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (5344) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (5354) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.89 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (5364) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (5364) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.87 -0.09 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5374) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (5384) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.89 -0.09 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5394) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (5394) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.87 -0.08 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (5404) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.86 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5404) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[1;31mE (5424) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (5424) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.86 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5434) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (5434) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.87 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5444) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (5454) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.87 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5464) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (5464) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.87 -0.08 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (5474) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (5484) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.87 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (5494) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (5494) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.89 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[0;32mI (5504) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.84 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (5504) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[1;31mE (5524) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (5524) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.83 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (5534) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (5534) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.83 -0.04 | Accel_angle: 86.86 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (5544) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (5554) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.82 -0.04 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (5564) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5564) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.04 | Accel_angle: 86.87 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (5574) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5574) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.03 | Accel_angle: 86.88 | Kalman_filter_angle: 86.89 |[0m
+[1;31mE (5584) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5594) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.01 | Accel_angle: 86.86 | Kalman_filter_angle: 86.88 |[0m
+[0;32mI (5604) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.02 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (5604) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[1;31mE (5624) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5624) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.02 | Accel_angle: 86.87 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (5634) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5634) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.85 -0.03 | Accel_angle: 86.84 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (5644) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (5654) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.02 | Accel_angle: 86.83 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5664) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5664) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.84 -0.04 | Accel_angle: 86.85 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5674) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5674) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.85 -0.04 | Accel_angle: 86.86 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5684) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (5694) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.03 | Accel_angle: 86.87 | Kalman_filter_angle: 86.86 |[0m
+[0;32mI (5704) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.03 | Accel_angle: 86.85 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5704) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[1;31mE (5714) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (5724) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.87 -0.05 | Accel_angle: 86.87 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5734) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5734) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.87 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5744) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5754) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.89 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (5764) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5764) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.07 | Accel_angle: 86.86 | Kalman_filter_angle: 86.87 |[0m
+[0;32mI (5774) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.06 | Accel_angle: 86.88 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (5774) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (5794) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (5794) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.07 | Accel_angle: 86.88 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (5804) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5804) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.05 | Accel_angle: 86.84 | Kalman_filter_angle: 86.87 |[0m
+[1;31mE (5814) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5824) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.86 -0.07 | Accel_angle: 86.86 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5834) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5834) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.07 | Accel_angle: 86.86 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5844) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5854) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.07 | Accel_angle: 86.84 | Kalman_filter_angle: 86.86 |[0m
+[1;31mE (5864) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (5864) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.06 | Accel_angle: 86.84 | Kalman_filter_angle: 86.86 |[0m
+[0;32mI (5874) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.07 | Accel_angle: 86.83 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (5874) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[1;31mE (5894) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5894) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.88 -0.05 | Accel_angle: 86.81 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (5904) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5904) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.86 -0.05 | Accel_angle: 86.84 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (5914) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5924) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.84 -0.06 | Accel_angle: 86.84 | Kalman_filter_angle: 86.84 |[0m
+[1;31mE (5934) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (5934) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.06 | Accel_angle: 86.87 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (5944) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (5954) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.82 -0.05 | Accel_angle: 86.89 | Kalman_filter_angle: 86.85 |[0m
+[1;31mE (5964) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (5964) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.84 -0.05 | Accel_angle: 86.91 | Kalman_filter_angle: 86.86 |[0m
+[0;32mI (5974) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.85 -0.05 | Accel_angle: 86.92 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (5974) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[1;31mE (5994) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (5994) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.88 -0.04 | Accel_angle: 86.92 | Kalman_filter_angle: 86.88 |[0m
+[1;31mE (6004) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (6004) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.90 -0.05 | Accel_angle: 86.95 | Kalman_filter_angle: 86.90 |[0m
+[1;31mE (6014) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (6024) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.90 -0.06 | Accel_angle: 86.96 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (6034) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (6034) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.87 -0.06 | Accel_angle: 86.94 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6044) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (6044) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.84 -0.05 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6054) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (6064) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.75 -0.05 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (6074) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.68 -0.70 -0.05 | Accel_angle: 86.94 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6074) MPU6050: Accel: 0.06 1.09 | Gyro: 0.68[0m
+[1;31mE (6084) MPU6050: Accel: 0.06 1.09 | Gyro: 0.64[0m
+[0;32mI (6094) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.64 -0.66 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6104) MPU6050: Accel: 0.06 1.09 | Gyro: 0.65[0m
+[0;32mI (6104) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.65 -0.66 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6114) MPU6050: Accel: 0.06 1.09 | Gyro: 0.64[0m
+[0;32mI (6124) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.64 -0.68 -0.08 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6134) MPU6050: Accel: 0.06 1.09 | Gyro: 0.60[0m
+[0;32mI (6134) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.60 -0.65 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6144) MPU6050: Accel: 0.06 1.09 | Gyro: 0.60[0m
+[0;32mI (6144) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.60 -0.66 -0.05 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6154) MPU6050: Accel: 0.06 1.09 | Gyro: 0.62[0m
+[0;32mI (6164) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.62 -0.69 -0.06 | Accel_angle: 86.94 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (6174) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.60 -0.69 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6174) MPU6050: Accel: 0.06 1.09 | Gyro: 0.60[0m
+[1;31mE (6184) MPU6050: Accel: 0.06 1.09 | Gyro: 0.62[0m
+[0;32mI (6194) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.62 -0.74 -0.05 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6204) MPU6050: Accel: 0.06 1.09 | Gyro: 0.63[0m
+[0;32mI (6204) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.63 -0.72 -0.05 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6214) MPU6050: Accel: 0.06 1.09 | Gyro: 0.65[0m
+[0;32mI (6224) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.65 -0.71 -0.06 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6234) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (6234) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.78 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (6244) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.84 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6244) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[1;31mE (6264) MPU6050: Accel: 0.06 1.09 | Gyro: 0.79[0m
+[0;32mI (6264) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.79 -0.89 -0.06 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6274) MPU6050: Accel: 0.06 1.09 | Gyro: 0.80[0m
+[0;32mI (6274) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.80 -0.92 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6284) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (6294) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.87 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6304) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (6304) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.86 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6314) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (6324) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.85 -0.07 | Accel_angle: 86.90 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6334) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (6334) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.06 | Accel_angle: 86.90 | Kalman_filter_angle: 86.91 |[0m
+[0;32mI (6344) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.87 -0.07 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (6344) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (6364) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (6364) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.87 -0.08 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (6374) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (6374) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.88 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (6384) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (6394) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.87 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (6404) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (6404) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.85 -0.08 | Accel_angle: 86.91 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (6414) MPU6050: Accel: 0.06 1.09 | Gyro: 0.78[0m
+[0;32mI (6414) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.78 -0.87 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6424) MPU6050: Accel: 0.06 1.09 | Gyro: 0.77[0m
+[0;32mI (6434) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.77 -0.84 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (6444) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.84 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6444) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[1;31mE (6454) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (6464) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.82 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6474) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (6474) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.82 -0.06 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6484) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (6494) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.84 -0.08 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6504) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (6504) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.84 -0.07 | Accel_angle: 86.91 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6514) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[0;32mI (6514) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.84 -0.06 | Accel_angle: 86.89 | Kalman_filter_angle: 86.91 |[0m
+[1;31mE (6524) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (6534) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.84 -0.05 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[0;32mI (6544) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.84 -0.07 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6544) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[1;31mE (6554) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (6564) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.85 -0.06 | Accel_angle: 86.94 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6574) MPU6050: Accel: 0.06 1.09 | Gyro: 0.76[0m
+[0;32mI (6574) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.76 -0.83 -0.05 | Accel_angle: 86.92 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6584) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (6594) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.82 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.92 |[0m
+[1;31mE (6604) MPU6050: Accel: 0.06 1.09 | Gyro: 0.73[0m
+[0;32mI (6604) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.73 -0.83 -0.06 | Accel_angle: 86.95 | Kalman_filter_angle: 86.93 |[0m
+[0;32mI (6614) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.74 -0.82 -0.06 | Accel_angle: 86.94 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (6614) MPU6050: Accel: 0.06 1.09 | Gyro: 0.74[0m
+[1;31mE (6634) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (6634) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.82 -0.06 | Accel_angle: 86.93 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (6644) MPU6050: Accel: 0.06 1.09 | Gyro: 0.75[0m
+[0;32mI (6644) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.75 -0.84 -0.05 | Accel_angle: 86.95 | Kalman_filter_angle: 86.94 |[0m
+[1;31mE (6654) MPU6050: Accel: 0.06 1.09 | Gyro: 0.72[0m
+[0;32mI (6664) Data: Accel: 0.15 0.06 1.09 | Gyro: 0.72 -0.82 -0.05 | Accel_angle: 86.89 | Kalman_filter_angle: 86.93 |[0m
+[1;31mE (6674) MPU6050: Accel: 0.06 1.09 | Gyro: 1.01[0m

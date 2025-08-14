@@ -1,0 +1,85 @@
+Command: /home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/dylan/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/Real-Time-Project.elf /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/build/bootloader/bootloader.elf -m '/home/dylan/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/dylan/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4004883b: uart_tx_one_char_uart in ROM
+[0m
+[0;33m--- 0x403c8700: _stext at ??:?
+[0m
+[0;33m--- 0x403c8924: call_start_cpu0 at /home/dylan/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x4200ba06: task_wdt_timeout_handling at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:436
+--- 0x4200be1c: task_wdt_isr at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:509
+--- 0x40377009: _xt_lowint1 at /home/dylan/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x42006596: uart_ll_get_txfifo_len at /home/dylan/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:422
+---  (inlined by) uart_tx_char at /home/dylan/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:190
+--- 0x420074a5: uart_write at /home/dylan/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:245
+--- 0x42008c1e: esp_vfs_write at /home/dylan/esp/esp-idf/components/vfs/vfs.c:982 (discriminator 4)
+--- 0x4200e8b6: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+--- 0x42008600: console_write at /home/dylan/esp/esp-idf/components/esp_vfs_console/vfs_console.c:83
+--- 0x42008c1e: esp_vfs_write at /home/dylan/esp/esp-idf/components/vfs/vfs.c:982 (discriminator 4)
+--- 0x4200e2fa: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+--- 0x4200dbb1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+--- 0x4200dc02: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+--- 0x4200e201: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+--- 0x42011f5b: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+---  (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+--- 0x42011962: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+--- 0x4200e371: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+--- 0x403809a7: esp_log_va at /home/dylan/esp/esp-idf/components/log/src/log.c:43
+---  (inlined by) esp_log at /home/dylan/esp/esp-idf/components/log/src/log.c:88
+--- 0x420098d9: kalman_filter_update at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:52 (discriminator 1)
+--- 0x42009977: kalman_filter_step at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:64
+--- 0x420099ac: KalmanTask at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:74 (discriminator 1)
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4200ba06: task_wdt_timeout_handling at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:436
+--- 0x4200be1c: task_wdt_isr at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:509
+--- 0x40377009: _xt_lowint1 at /home/dylan/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x42006596: uart_ll_get_txfifo_len at /home/dylan/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:422
+---  (inlined by) uart_tx_char at /home/dylan/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:190
+--- 0x420074a5: uart_write at /home/dylan/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:245
+--- 0x42008c1e: esp_vfs_write at /home/dylan/esp/esp-idf/components/vfs/vfs.c:982 (discriminator 4)
+--- 0x4200e8b6: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+--- 0x42008600: console_write at /home/dylan/esp/esp-idf/components/esp_vfs_console/vfs_console.c:83
+--- 0x42008c1e: esp_vfs_write at /home/dylan/esp/esp-idf/components/vfs/vfs.c:982 (discriminator 4)
+--- 0x4200e2fa: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+--- 0x4200dbb1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+--- 0x4200dc02: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+--- 0x4200e201: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+--- 0x42011f5b: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+---  (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+--- 0x42011962: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+--- 0x4200e371: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+--- 0x403809a7: esp_log_va at /home/dylan/esp/esp-idf/components/log/src/log.c:43
+---  (inlined by) esp_log at /home/dylan/esp/esp-idf/components/log/src/log.c:88
+--- 0x420098d9: kalman_filter_update at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:52 (discriminator 1)
+--- 0x42009977: kalman_filter_step at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:64
+--- 0x420099ac: KalmanTask at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:74 (discriminator 1)
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4200ba06: task_wdt_timeout_handling at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:436
+--- 0x4200be1c: task_wdt_isr at /home/dylan/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:509
+--- 0x40377009: _xt_lowint1 at /home/dylan/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x420065a7: uart_ll_write_txfifo at /home/dylan/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:370
+---  (inlined by) uart_tx_char at /home/dylan/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:194
+--- 0x420074a5: uart_write at /home/dylan/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:245
+--- 0x42008c1e: esp_vfs_write at /home/dylan/esp/esp-idf/components/vfs/vfs.c:982 (discriminator 4)
+--- 0x4200e8b6: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+--- 0x42008600: console_write at /home/dylan/esp/esp-idf/components/esp_vfs_console/vfs_console.c:83
+--- 0x42008c1e: esp_vfs_write at /home/dylan/esp/esp-idf/components/vfs/vfs.c:982 (discriminator 4)
+--- 0x4200e2fa: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+--- 0x4200dbb1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+--- 0x4200dc02: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+--- 0x4200e201: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+--- 0x42011f5b: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+---  (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+--- 0x42011962: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+--- 0x4200e371: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+--- 0x403809a7: esp_log_va at /home/dylan/esp/esp-idf/components/log/src/log.c:43
+---  (inlined by) esp_log at /home/dylan/esp/esp-idf/components/log/src/log.c:88
+--- 0x420098d9: kalman_filter_update at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:52 (discriminator 1)
+--- 0x42009977: kalman_filter_step at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:64
+--- 0x420099ac: KalmanTask at /home/dylan/esp/esp_proj/self-balancing-robot/MPU6050-sensor-testing/main/Kalman/kalman.c:74 (discriminator 1)
+--- 0x4037a7c9: vPortTaskWrapper at /home/dylan/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m
